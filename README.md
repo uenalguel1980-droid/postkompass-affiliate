@@ -32,7 +32,7 @@ npm run lint       # ESLint
 npm run format     # Prettier
 ```
 
-Der Inhalt von `out/` ist das deploybare Artefakt (z. B. per FTP nach `public_html` auf Hostinger). `out/` und `.next/` sind nicht Teil des Repositories.
+Der Inhalt von `out/` ist das deploybare Artefakt (z. B. per FTP nach `public_html` auf Hostinger). `out/` und `.next/` sind nicht Teil des Repositories. Deployment-Anleitung, GitHub-Action-Setup und Go-Live-Checkliste: [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ## Projektstruktur
 

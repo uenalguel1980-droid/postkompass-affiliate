@@ -1,0 +1,85 @@
+# Tarvyo24 – Build & Deployment (statischer Export → Hostinger via FTPS)
+#
+# SICHERHEITSKONZEPT:
+# - Bei jedem Push auf main läuft NUR der Build (CI-Prüfung + Artefakt).
+# - Das Deployment läuft AUSSCHLIESSLICH bei manuellem Start
+#   (Actions → "Deploy Tarvyo24" → "Run workflow"). So kann kein Push
+#   versehentlich live gehen, solange die Go-Live-Blocker offen sind
+#   (siehe PROJEKTPLAN.md: Impressum, Datenschutz, noindex-Review, Postfach).
+# - Nach dem Go-Live kann auf Auto-Deploy umgestellt werden: dazu unten im
+#   deploy-Job die if-Zeile entfernen bzw. durch
+#   "if: github.ref == 'refs/heads/main'" ersetzen.
+#
+# BENÖTIGTE GITHUB SECRETS (Repo → Settings → Secrets and variables → Actions):
+#   FTP_SERVER      z. B. ftp.tarvyo24.de bzw. der Hostinger-FTP-Host
+#   FTP_USERNAME    FTP-Benutzername aus dem Hostinger-Panel
+#   FTP_PASSWORD    zugehöriges Passwort
+#   FTP_TARGET_DIR  Zielverzeichnis MIT abschließendem Slash, z. B. public_html/
+# Es sind KEINE Zugangsdaten in dieser Datei oder im Repo hinterlegt.
+#
+# FTP-Action: SamKirkland/FTP-Deploy-Action — etablierte, weit verbreitete
+# Action für statische FTP/FTPS-Deployments (inkrementeller Sync, kein
+# Löschen per Default, braucht keine erhöhten Workflow-Rechte). Version
+# ist gepinnt.
+
+name: Deploy Tarvyo24
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build (statischer Export)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Abhängigkeiten installieren
+        run: npm ci
+
+      - name: Statischen Export bauen
+        run: npm run build
+
+      - name: Export als Artefakt sichern
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: out/
+          retention-days: 7
+
+  deploy:
+    name: Deploy zu Hostinger (nur manuell)
+    # Deployment NUR bei manuellem Start — Schutz vor versehentlichem
+    # Livegang, solange Go-Live-Blocker offen sind (siehe Kopfkommentar).
+    if: github.event_name == 'workflow_dispatch'
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Export-Artefakt laden
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: out
+
+      - name: Upload per FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: out/
+          server-dir: ${{ secrets.FTP_TARGET_DIR }}
