@@ -1,11 +1,11 @@
 # Projektplan: Tarvyo24 Affiliate
 
-**Marke:** Tarvyo24 (eigenständiger Auftritt, ohne sichtbaren PostKompass-Bezug)
+**Marke:** Tarvyo24 (eigenständiger Auftritt, ohne sichtbaren Bezug zu einer Dachmarke)
 **Claim:** Erst checken. Dann entscheiden.
 **Domain:** https://tarvyo24.de (final, aktiv)
 **Stack:** Next.js (App Router) · TypeScript · Tailwind CSS · statischer Export für Hostinger · SEO-optimiert · mobile-first
 
-**Stand:** 05.07.2026 — Plan freigegeben, Deployment-Strategie für v1 entschieden (Abschnitt 9), Marke von KlarKompass auf Tarvyo24 umgestellt.
+**Stand:** 05.07.2026 — Plan freigegeben, Deployment-Strategie für v1 entschieden (Abschnitt 9), Marke final auf Tarvyo24 festgelegt (Rebranding vom Arbeitstitel am selben Tag).
 
 ---
 

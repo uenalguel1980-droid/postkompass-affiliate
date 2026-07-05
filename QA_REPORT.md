@@ -19,7 +19,7 @@
 - `out/sitemap.xml` vorhanden: 19 URLs, alle `https://tarvyo24.de/…` mit Trailing Slash, `lastmod` nur bei Artikeln
 - `out/robots.txt` vorhanden: `Allow: /` + Sitemap-Verweis
 - `out/og.png` (17 kB) und `out/icon.svg` vorhanden
-- Alte Marken/Domains (KlarKompass, PostKompass, postkompass.de, klarkompass.de): **0 Treffer** im gesamten Export
+- Frühere Marken- und Domain-Namen (Arbeitstitel vor dem Rebranding auf Tarvyo24): **0 Treffer** im gesamten Export
 - Exportgröße gesamt: ~2,9 MB (überwiegend Next-Framework-Chunks und selbst gehostete Schrift)
 
 ## 2. Interner Linkcheck ✅

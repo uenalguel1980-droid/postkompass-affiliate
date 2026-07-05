@@ -45,6 +45,15 @@ types/        Zentrale TypeScript-Typen der Datenschicht
 public/       Statische Assets (Favicon, OG-Bild)
 ```
 
+## Hinweis zu Ordner- und Repository-Namen
+
+Historisch bedingt heißen der lokale Projektordner und das GitHub-Repository noch `postkompass-affiliate` — dies ist die einzige verbleibende technische Nennung des alten Arbeitstitels und hat keinerlei Auswirkung auf die Website (Marke, Code, Export und Metadaten verwenden ausschließlich Tarvyo24).
+
+Empfehlung für später (manuell, außerhalb der laufenden Entwicklungsumgebung):
+- GitHub-Repository umbenennen in **`tarvyo24-affiliate`** (GitHub leitet alte URLs automatisch weiter; danach lokal `git remote set-url` anpassen)
+- Lokalen Ordner bei Gelegenheit in **`tarvyo24-affiliate`** umbenennen (nicht während einer laufenden Session/IDE-Anbindung)
+- Ein späteres Hosting-/Deployment-Projekt (Hostinger, ggf. Vercel) direkt **`tarvyo24-affiliate`** nennen
+
 ## Verbindliche v1-Leitplanken
 
 - Keine echten Affiliate-Links (alle Partner `affiliateUrl: null`, Status `placeholder`)

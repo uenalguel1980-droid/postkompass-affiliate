@@ -5,7 +5,7 @@ import type { SiteConfig } from "@/types";
  * und Tracking-Platzhalter.
  *
  * Marke: Tarvyo24 tritt eigenständig auf (Entscheidung vom 05.07.2026),
- * ohne sichtbaren Zusatz "ein Projekt von PostKompass".
+ * ohne sichtbaren Zusatz einer Dachmarke.
  *
  * v1-LEITPLANKEN:
  * - tracking: alle Werte null. GA4/GTM dürfen erst aktiviert werden, wenn
