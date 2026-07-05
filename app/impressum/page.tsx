@@ -53,7 +53,7 @@ export default function ImpressumPage() {
             Betreiber / Verantwortlicher
           </h2>
           <p className="mt-3 text-base leading-relaxed text-slate-700">
-            <Placeholder>[Vor- und Nachname bzw. Unternehmen des Betreibers einsetzen]</Placeholder>
+            <Placeholder>[Vor- und Nachname bzw. Unternehmen des Betreibers einsetzen — bei Unternehmen inklusive Rechtsform, z. B. Einzelunternehmen/GbR/UG/GmbH, und ggf. Vertretungsberechtigten]</Placeholder>
           </p>
         </section>
 

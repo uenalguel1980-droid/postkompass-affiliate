@@ -6,14 +6,37 @@
 
 ---
 
-## 🔴 Go-Live-Blocker (zuerst erfüllen!)
+## 🔴 Finale Go-Live-Checkliste
 
-Die Seite darf erst veröffentlicht werden, wenn (siehe auch PROJEKTPLAN.md):
+**Stand der Vorbereitung (06.07.2026):** Technisch ist alles bereit; die Punkte 1–3 sind offene Blocker, die nur der Betreiber liefern kann. Reihenfolge einhalten — erst wenn 1–6 erledigt sind, darf deployed werden.
 
-1. ☐ Echte Betreiberangaben im **Impressum** eingepflegt und geprüft (§ 5 DDG)
-2. ☐ Finale **Datenschutzerklärung** eingepflegt und geprüft (DSGVO)
-3. ☐ **PlaceholderNotice-Banner** von beiden Rechtsseiten entfernt und die **noindex**-Entscheidung überprüft (Kommentare in `app/impressum/page.tsx` und `app/datenschutz/page.tsx`)
-4. ☐ Postfach **info@tarvyo24.de** tatsächlich eingerichtet und getestet
+**Vor dem Deployment (Blocker):**
+
+1. ☐ **Impressum vollständig** (§ 5 DDG) — folgende echte Angaben fehlen noch (alle als `[Platzhalter]` markiert in `app/impressum/page.tsx`):
+   - Betreibername/Firma inkl. Rechtsform (und ggf. Vertretungsberechtigter)
+   - ladungsfähige Anschrift (Straße, Hausnummer, PLZ, Ort)
+   - Telefonnummer (optional, empfohlen)
+   - Umsatzsteuer-ID (falls vorhanden, sonst Abschnitt entfernen)
+   - Verantwortlicher für Inhalte nach § 18 Abs. 2 MStV (Name + Anschrift)
+   - Erklärung zur Verbraucherstreitbeilegung (§ 36 VSBG)
+   - Bereits vorhanden: E-Mail info@tarvyo24.de
+2. ☐ **Datenschutzerklärung final** (DSGVO) — vollständiger geprüfter Text (Generator/Anwalt) ersetzt die Strukturplatzhalter in `app/datenschutz/page.tsx`; „Stand"-Datum einsetzen. Die dokumentierten v1-Fakten stimmen (kein Tracking, keine Cookies durch uns, kein Formular, Partnerlinks nur Platzhalter). **Bei späteren Änderungen nachziehen:** Analytics-Einführung, aktive Affiliate-Netzwerke (Netzwerk-Tracking!), Kontaktformular.
+3. ☐ **info@tarvyo24.de funktioniert** — Postfach bei Hostinger einrichten und Testmail senden/empfangen (Adresse wird auf /kontakt und im Impressum verwendet; zentrale Quelle: `data/site.ts`)
+4. ☐ **Banner/noindex geprüft** — PlaceholderNotice-Banner von /impressum und /datenschutz entfernen (erst NACH Einpflegen der echten Texte!); noindex-Entscheidung treffen: Rechtsseiten dürfen dauerhaft noindex bleiben, Inhaltsseiten sind indexierbar (Stand heute korrekt: noindex NUR auf den beiden Rechtsseiten)
+5. ☐ **Domain/SSL aktiv** — tarvyo24.de zeigt aufs Hosting, Let's-Encrypt aktiv, https erzwungen, www→non-www
+6. ☐ **GitHub Secrets eingetragen** (FTP_SERVER, FTP_USERNAME, FTP_PASSWORD, FTP_TARGET_DIR)
+
+**Deployment:**
+
+7. ☐ **Deployment manuell auslösen** — GitHub → Actions → „Deploy Tarvyo24" → Run workflow
+
+**Nach dem Deployment:**
+
+8. ☐ **Live-Seite geprüft** — Stichproben: /, /kategorien/handyvertrag/, /ratgeber/handyvertrag-vergleichen/, /impressum/, /datenschutz/, Fantasie-URL (→ 404)
+9. ☐ **sitemap.xml erreichbar** — https://tarvyo24.de/sitemap.xml
+10. ☐ **robots.txt erreichbar** — https://tarvyo24.de/robots.txt
+11. ☐ **PageSpeed geprüft** — PageSpeed Insights auf Live-URL, Ziel ≥ 90 in allen Kategorien
+12. ☐ Google Search Console einrichten + Sitemap einreichen (siehe unten)
 
 ---
 
