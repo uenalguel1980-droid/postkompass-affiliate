@@ -73,11 +73,11 @@ Alle 10 Seitentypen einzeln geprüft (Startseite, beide Übersichten, Kategorie-
 - Keine Superlative/Garantie-Formulierungen („beste", „garantiert", „sicherer Kredit") in den Inhalten
 - Werbekennzeichnung: „Anzeige"-Badge an jedem Werbeplatz, AffiliateDisclosure vor Werbeblöcken, LegalNoticeBox vor Partnerinhalten bei Kredit/Versicherungen
 
-**🔴 Offene Go-Live-Blocker (vor Schritt 12 zu erfüllen, siehe PROJEKTPLAN.md):**
-1. Echte Betreiberangaben ins Impressum (§ 5 DDG) — aktuell Platzhalter
-2. Finale Datenschutzerklärung (DSGVO) — aktuell Platzhalter
-3. PlaceholderNotice-Banner entfernen + noindex-Entscheidung überprüfen
-4. Postfach info@tarvyo24.de tatsächlich einrichten
+**🔴 Offene Go-Live-Blocker (Stand 06.07.2026, siehe DEPLOYMENT.md):**
+1. ~~Echte Betreiberangaben ins Impressum~~ — **erledigt 06.07.2026** (Marija Beisler, Einzelunternehmen, Duingen; ohne USt-ID/Steuernummer; VSBG-Standarderklärung zur Bestätigung durch Betreiber)
+2. Finale Datenschutzerklärung (DSGVO) — weiterhin Platzhalter, **offen**
+3. Datenschutz-Banner entfernen nach finalem Text (Impressum-Banner bereits entfernt; noindex-Entscheidung getroffen: Rechtsseiten dauerhaft noindex)
+4. Postfach info@tarvyo24.de einrichten und testen — **offen**
 
 ## Gefundene & behobene Fehler
 

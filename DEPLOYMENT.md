@@ -12,17 +12,11 @@
 
 **Vor dem Deployment (Blocker):**
 
-1. ☐ **Impressum vollständig** (§ 5 DDG) — folgende echte Angaben fehlen noch (alle als `[Platzhalter]` markiert in `app/impressum/page.tsx`):
-   - Betreibername/Firma inkl. Rechtsform (und ggf. Vertretungsberechtigter)
-   - ladungsfähige Anschrift (Straße, Hausnummer, PLZ, Ort)
-   - Telefonnummer (optional, empfohlen)
-   - Umsatzsteuer-ID (falls vorhanden, sonst Abschnitt entfernen)
-   - Verantwortlicher für Inhalte nach § 18 Abs. 2 MStV (Name + Anschrift)
-   - Erklärung zur Verbraucherstreitbeilegung (§ 36 VSBG)
-   - Bereits vorhanden: E-Mail info@tarvyo24.de
+1. ☑ **Impressum vollständig** (§ 5 DDG) — **erledigt am 06.07.2026** mit echten Betreiberangaben: Marija Beisler (Einzelunternehmen), ladungsfähige Anschrift in Duingen, E-Mail, Telefon, Verantwortliche nach § 18 Abs. 2 MStV. Bewusst ohne USt-ID (nicht vorhanden) und ohne Steuernummer. Platzhalter-Banner entfernt.
+   ⚠️ **Vom Betreiber zu bestätigen:** Die VSBG-Erklärung wurde mit der üblichen Standard-Formulierung eingesetzt („nicht bereit oder verpflichtet, an Streitbeilegungsverfahren teilzunehmen"). Falls stattdessen Teilnahmebereitschaft gewünscht ist, bitte melden — eine Zeile.
 2. ☐ **Datenschutzerklärung final** (DSGVO) — vollständiger geprüfter Text (Generator/Anwalt) ersetzt die Strukturplatzhalter in `app/datenschutz/page.tsx`; „Stand"-Datum einsetzen. Die dokumentierten v1-Fakten stimmen (kein Tracking, keine Cookies durch uns, kein Formular, Partnerlinks nur Platzhalter). **Bei späteren Änderungen nachziehen:** Analytics-Einführung, aktive Affiliate-Netzwerke (Netzwerk-Tracking!), Kontaktformular.
 3. ☐ **info@tarvyo24.de funktioniert** — Postfach bei Hostinger einrichten und Testmail senden/empfangen (Adresse wird auf /kontakt und im Impressum verwendet; zentrale Quelle: `data/site.ts`)
-4. ☐ **Banner/noindex geprüft** — PlaceholderNotice-Banner von /impressum und /datenschutz entfernen (erst NACH Einpflegen der echten Texte!); noindex-Entscheidung treffen: Rechtsseiten dürfen dauerhaft noindex bleiben, Inhaltsseiten sind indexierbar (Stand heute korrekt: noindex NUR auf den beiden Rechtsseiten)
+4. ☐ **Banner/noindex geprüft** — Stand 06.07.2026: /impressum ist final (Banner entfernt); /datenschutz trägt weiterhin den PlaceholderNotice-Banner, bis der finale Text eingepflegt ist. **noindex-Entscheidung getroffen:** beide Rechtsseiten bleiben dauerhaft `noindex, follow` (kein SEO-Wert, über Footer erreichbar — Impressumspflicht dadurch unberührt). Offen bleibt nur das Entfernen des Datenschutz-Banners nach Einpflegen des finalen Texts.
 5. ☐ **Domain/SSL aktiv** — tarvyo24.de zeigt aufs Hosting, Let's-Encrypt aktiv, https erzwungen, www→non-www
 6. ☐ **GitHub Secrets eingetragen** (FTP_SERVER, FTP_USERNAME, FTP_PASSWORD, FTP_TARGET_DIR)
 

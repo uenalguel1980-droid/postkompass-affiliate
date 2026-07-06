@@ -1,23 +1,20 @@
 import type { Metadata } from "next";
 import { site } from "@/data/site";
 import { Container } from "@/components/ui/Container";
-import { PlaceholderNotice } from "@/components/legal/PlaceholderNotice";
 
 /*
- * IMPRESSUM — STRUKTUR-PLATZHALTER, KEIN FINALER RECHTSTEXT.
+ * IMPRESSUM — echte Betreiberangaben (eingepflegt am 06.07.2026,
+ * vom Betreiber geliefert).
  *
- * HARTER GO-LIVE-BLOCKER: Vor Veröffentlichung müssen die echten
- * Betreiberangaben (§ 5 DDG) ergänzt und geprüft werden. Keine erfundenen
- * Namen, Adressen oder Registernummern — alle offenen Angaben stehen in
- * eckigen Klammern.
+ * Bewusste Auslassungen (Vorgabe des Betreibers):
+ * - keine Umsatzsteuer-ID (nicht vorhanden — Abschnitt entfernt, kein Platzhalter)
+ * - keine Steuernummer (wird nicht angezeigt)
  *
- * Bewusst KEIN Link zur EU-ODR-Plattform: Sie wurde im Juli 2025
- * eingestellt und gehört nicht mehr ins Impressum.
+ * Kein Link zur EU-ODR-Plattform (seit Juli 2025 eingestellt).
  *
- * noindex, follow: solange diese Seite ein Platzhalter ist, soll sie nicht
- * in Suchergebnissen erscheinen. Beim Einpflegen des finalen Rechtstexts
- * prüfen und ggf. entfernen (Rechtsseiten können auch dauerhaft noindex
- * bleiben — Entscheidung dann treffen).
+ * noindex, follow bleibt BEWUSST bestehen: Rechtsseiten haben keinen
+ * SEO-Wert und bleiben dauerhaft aus dem Index — die Seite ist über
+ * Footer/Kontakt jederzeit erreichbar (Impressumspflicht erfüllt).
  */
 export const metadata: Metadata = {
   title: "Impressum",
@@ -31,11 +28,6 @@ export const metadata: Metadata = {
   },
 };
 
-/** Sichtbar als Platzhalter markierter Wert. */
-function Placeholder({ children }: { children: string }) {
-  return <span className="italic text-slate-400">{children}</span>;
-}
-
 export default function ImpressumPage() {
   return (
     <Container className="max-w-3xl py-12 sm:py-16">
@@ -43,26 +35,24 @@ export default function ImpressumPage() {
         Impressum
       </h1>
 
-      <div className="mt-6">
-        <PlaceholderNotice />
-      </div>
-
       <div className="mt-10 space-y-8">
         <section>
           <h2 className="text-xl font-bold tracking-tight text-brand-900">
-            Betreiber / Verantwortlicher
+            Angaben gemäß § 5 DDG
           </h2>
           <p className="mt-3 text-base leading-relaxed text-slate-700">
-            <Placeholder>[Vor- und Nachname bzw. Unternehmen des Betreibers einsetzen — bei Unternehmen inklusive Rechtsform, z. B. Einzelunternehmen/GbR/UG/GmbH, und ggf. Vertretungsberechtigten]</Placeholder>
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold tracking-tight text-brand-900">Anschrift</h2>
-          <p className="mt-3 text-base leading-relaxed text-slate-700">
-            <Placeholder>[Straße und Hausnummer einsetzen]</Placeholder>
+            Marija Beisler
             <br />
-            <Placeholder>[Postleitzahl und Ort einsetzen]</Placeholder>
+            Einzelunternehmen
+            <br />
+            Triftstraße 19
+            <br />
+            31089 Duingen
+            <br />
+            Deutschland
+          </p>
+          <p className="mt-3 text-base leading-relaxed text-slate-700">
+            Vertretungsberechtigt: Marija Beisler
           </p>
         </section>
 
@@ -77,16 +67,7 @@ export default function ImpressumPage() {
               {site.contactEmail}
             </a>
             <br />
-            <Placeholder>[ggf. Telefonnummer einsetzen]</Placeholder>
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-bold tracking-tight text-brand-900">
-            Umsatzsteuer-Identifikationsnummer
-          </h2>
-          <p className="mt-3 text-base leading-relaxed text-slate-700">
-            <Placeholder>[Falls vorhanden: USt-IdNr. nach § 27a UStG einsetzen, sonst Abschnitt entfernen]</Placeholder>
+            Telefon: 0152 54040085
           </p>
         </section>
 
@@ -95,7 +76,13 @@ export default function ImpressumPage() {
             Verantwortlich für Inhalte nach § 18 Abs. 2 MStV
           </h2>
           <p className="mt-3 text-base leading-relaxed text-slate-700">
-            <Placeholder>[Vor- und Nachname sowie Anschrift der inhaltlich verantwortlichen Person einsetzen]</Placeholder>
+            Marija Beisler
+            <br />
+            Triftstraße 19
+            <br />
+            31089 Duingen
+            <br />
+            Deutschland
           </p>
         </section>
 
@@ -104,7 +91,9 @@ export default function ImpressumPage() {
             Verbraucherstreitbeilegung
           </h2>
           <p className="mt-3 text-base leading-relaxed text-slate-700">
-            <Placeholder>[Angabe nach § 36 VSBG einsetzen: Erklärung, ob eine Teilnahme an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle erfolgt oder nicht]</Placeholder>
+            Wir sind nicht bereit oder verpflichtet, an
+            Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+            teilzunehmen (§ 36 VSBG).
           </p>
         </section>
       </div>
