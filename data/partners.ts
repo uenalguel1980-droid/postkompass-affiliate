@@ -16,6 +16,10 @@ import type { Partner } from "@/types";
  *
  * Vorbereitete Netzwerke/Programme (Feld network):
  * check24 · awin · financeads · adcell · tarifcheck · telekom · direct
+ *
+ * AKTIVIERUNG: Der vollständige Prozess (Checkliste je Partner, SubID-
+ * Konvention, Datenschutz-Pflichtschritte, § 17 PAngV bei Kredit) steht in
+ * PARTNER.md. Kein Partner wird ohne diese Checkliste auf "active" gestellt.
  */
 export const partners: Partner[] = [
   // --- Handyvertrag ---------------------------------------------------------

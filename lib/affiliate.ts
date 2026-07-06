@@ -1,5 +1,5 @@
 import { partners } from "@/data/partners";
-import type { Category, Partner } from "@/types";
+import type { Category, Partner, PartnerNetwork } from "@/types";
 
 /**
  * Zentrale Affiliate-Logik — EINZIGE Stelle im Projekt, die Partnerlinks
@@ -82,4 +82,29 @@ export function appendSubId(
   const parsed = new URL(url);
   parsed.searchParams.set(paramName, subId);
   return parsed.toString();
+}
+
+/**
+ * SubID-Parametername je Netzwerk (VORBEREITET — Nutzung erst bei Aktivierung).
+ *
+ * Nur Netzwerke eintragen, deren Parametername VERIFIZIERT ist (Netzwerk-Doku
+ * bzw. Partner-Backend). Fehlt ein Netzwerk hier, muss der Name bei der
+ * Aktivierung im jeweiligen Backend nachgeschlagen werden — siehe PARTNER.md.
+ */
+export const SUBID_PARAM_BY_NETWORK: Partial<Record<PartnerNetwork, string>> = {
+  awin: "clickref",
+  financeads: "subid",
+  adcell: "subid",
+  // check24 / tarifcheck / telekom / direct: vor Aktivierung im
+  // Partner-Backend verifizieren und hier ergänzen (PARTNER.md, Schritt 2).
+};
+
+/**
+ * SubID-Konvention: tarvyo24_[kategorie]_[platzierung]
+ * (nur Kleinbuchstaben/Ziffern/Bindestrich je Segment, Segmente durch "_").
+ * Beispiele: tarvyo24_handyvertrag_partnercard · tarvyo24_internet-dsl_offertile
+ * Platzierungswerte: siehe PARTNER.md (partnercard | offertile | ratgeber).
+ */
+export function buildSubId(categorySlug: string, placement: string): string {
+  return `tarvyo24_${categorySlug}_${placement}`;
 }

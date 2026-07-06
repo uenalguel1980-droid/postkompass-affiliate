@@ -47,6 +47,13 @@ export interface Partner {
   network?: PartnerNetwork;
   /** true bei Kredit-/Versicherungspartnern → erzwingt LegalNoticeBox-Logik. */
   sensitive: boolean;
+  /**
+   * Netzwerk-/programmspezifische Aktivierungshinweise — reine interne Doku,
+   * wird NIRGENDS gerendert. Wird bei der Aktivierung befüllt (z. B. Auflagen
+   * aus der Programmfreigabe, Deeplink-Besonderheiten, SubID-Parametername).
+   * Prozess: siehe PARTNER.md.
+   */
+  activationNote?: string;
 }
 
 /**
