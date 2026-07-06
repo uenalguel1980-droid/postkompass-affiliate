@@ -11,11 +11,17 @@
 #   "if: github.ref == 'refs/heads/main'" ersetzen.
 #
 # BENÖTIGTE GITHUB SECRETS (Repo → Settings → Secrets and variables → Actions):
-#   FTP_SERVER      z. B. ftp.tarvyo24.de bzw. der Hostinger-FTP-Host
+#   FTP_SERVER      Hostinger-FTP-IP (152.239.125.180); Domain-Hostname zeigt
+#                   auf die Webserver und funktioniert für FTP nicht
 #   FTP_USERNAME    FTP-Benutzername aus dem Hostinger-Panel
 #   FTP_PASSWORD    zugehöriges Passwort
-#   FTP_TARGET_DIR  Zielverzeichnis MIT abschließendem Slash, z. B. public_html/
 # Es sind KEINE Zugangsdaten in dieser Datei oder im Repo hinterlegt.
+#
+# HINWEIS server-dir: Der Hostinger-FTP-Login startet bereits IM Webroot
+# (public_html). server-dir ist deshalb fest auf "./" gesetzt — das frühere
+# Secret FTP_TARGET_DIR wird NICHT mehr verwendet und kann gelöscht werden
+# (public_html/ als Wert erzeugte fälschlich public_html/public_html/,
+# festgestellt am 06.07.2026).
 #
 # FTP-Action: SamKirkland/FTP-Deploy-Action — etablierte, weit verbreitete
 # Action für statische FTP/FTPS-Deployments (inkrementeller Sync, kein
@@ -87,4 +93,6 @@ jobs:
           # Zertifikatsnamens-Pruefung entfaellt. Diagnose: 06.07.2026.
           security: loose
           local-dir: out/
-          server-dir: ${{ secrets.FTP_TARGET_DIR }}
+          # Fest "./": FTP-Login landet bereits im Webroot (public_html) —
+          # siehe Kopfkommentar. Kein Secret mehr nötig.
+          server-dir: ./

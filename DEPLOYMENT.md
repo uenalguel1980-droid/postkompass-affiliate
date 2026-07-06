@@ -59,10 +59,11 @@ Workflow: [.github/workflows/deploy.yml](.github/workflows/deploy.yml)
 
 | Secret | Inhalt | Beispiel |
 |---|---|---|
-| `FTP_SERVER` | FTP-Host aus dem Hostinger-Panel | `ftp.tarvyo24.de` o. Ä. |
+| `FTP_SERVER` | Hostinger-**FTP-IP** (der Domain-Hostname zeigt auf die Webserver und funktioniert für FTP nicht) | `152.239.125.180` |
 | `FTP_USERNAME` | FTP-Benutzername | aus Hostinger → FTP-Konten |
 | `FTP_PASSWORD` | FTP-Passwort | aus Hostinger → FTP-Konten |
-| `FTP_TARGET_DIR` | Zielverzeichnis **mit** Slash am Ende | `public_html/` |
+
+**Hinweis (06.07.2026):** Das frühere Secret `FTP_TARGET_DIR` wird nicht mehr verwendet und kann in GitHub gelöscht werden. Der Hostinger-FTP-Login startet bereits im Webroot (`public_html`) — `server-dir` ist im Workflow fest auf `./` gesetzt (der Wert `public_html/` erzeugte fälschlich `public_html/public_html/`).
 
 Es liegen **keine Zugangsdaten im Repository** — der Workflow funktioniert erst, wenn die Secrets in GitHub hinterlegt sind.
 
