@@ -6,6 +6,12 @@ import { Container } from "@/components/ui/Container";
  * (vom Betreiber geliefert, 1:1 übernommen). Der Betreiber sollte den
  * Text vor dem Livegang abschließend prüfen (siehe DEPLOYMENT.md).
  *
+ * Ergänzung 06.07.2026 (Abschnitt 6): Hinweis auf die technisch vorbereitete,
+ * aber NICHT aktive Plausible-Webanalyse. Bei tatsächlicher Aktivierung
+ * (data/site.ts → tracking.plausibleDomain) muss Abschnitt 6 im selben Commit
+ * zu einer vollständigen Plausible-Beschreibung ausgebaut werden
+ * (siehe DEPLOYMENT.md → „Webanalyse aktivieren").
+ *
  * noindex, follow bleibt BEWUSST bestehen: Rechtsseiten bleiben dauerhaft
  * aus dem Index (Entscheidung vom 06.07.2026, siehe app/impressum/page.tsx).
  *
@@ -159,7 +165,11 @@ const sections: PrivacySection[] = [
       },
       {
         type: "p",
-        text: "Sollten künftig Analyse- oder Tracking-Dienste eingesetzt werden, wird diese Datenschutzerklärung entsprechend ergänzt und, soweit erforderlich, eine vorherige Einwilligung eingeholt.",
+        text: "Technisch ist die Einbindung des cookielosen Webanalyse-Dienstes Plausible Analytics vorbereitet, derzeit jedoch nicht aktiviert. Solange keine Aktivierung erfolgt ist, wird kein Analyse-Skript geladen und es werden keine Besuchsdaten an Plausible übermittelt.",
+      },
+      {
+        type: "p",
+        text: "Sollten künftig Analyse- oder Tracking-Dienste eingesetzt werden, wird diese Datenschutzerklärung vor der Aktivierung entsprechend ergänzt und, soweit erforderlich, eine vorherige Einwilligung eingeholt.",
       },
     ],
   },

@@ -149,6 +149,13 @@ export interface NavItem {
 export interface TrackingConfig {
   /** Google Search Console Meta-Tag-Verifikation (consent-frei aktivierbar). */
   gscVerification: string | null;
+  /**
+   * Plausible Analytics — cookielose Webanalyse. Wert = data-domain
+   * (z. B. "tarvyo24.de"). null = es wird kein Analyse-Script gerendert.
+   * Vor Aktivierung: Datenschutzerklärung Abschnitt 6 im selben Commit
+   * anpassen (siehe DEPLOYMENT.md → „Webanalyse aktivieren").
+   */
+  plausibleDomain: string | null;
   /** Google Analytics 4 Measurement-ID. */
   ga4Id: string | null;
   /** Google Tag Manager Container-ID. */

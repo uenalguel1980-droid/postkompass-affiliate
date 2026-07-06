@@ -81,11 +81,15 @@ const websiteJsonLd = {
  * Hier ist die einzige Stelle, an der später Tracking eingebunden wird:
  * 1. Google Search Console: Meta-Tag-Verifikation (consent-frei möglich),
  *    gesteuert über site.ts → tracking.gscVerification.
- * 2. GA4 / GTM: dürfen NUR gerendert werden, wenn
+ * 2. Plausible Analytics (cookielos, EU-gehostet): wird NUR gerendert, wenn
+ *    site.ts → tracking.plausibleDomain gesetzt ist. Solange null, enthält
+ *    der Build kein externes Script. Aktivierung inkl. Pflicht-Anpassung der
+ *    Datenschutzerklärung (Abschnitt 6): siehe DEPLOYMENT.md.
+ * 3. GA4 / GTM: dürfen NUR gerendert werden, wenn
  *    (a) die ID in site.ts gesetzt ist UND
  *    (b) die Consent-Lösung die Einwilligung bestätigt.
  *    Bis dahin: keine Skripte, auch nicht "kurz zum Testen".
- * 3. ConsentBannerPlaceholder rendert nichts — siehe Kommentar-Vertrag dort.
+ * 4. ConsentBannerPlaceholder rendert nichts — siehe Kommentar-Vertrag dort.
  */
 
 export default function RootLayout({
@@ -95,6 +99,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
+      <head>
+        {/*
+         * Plausible Analytics — nur gerendert, wenn tracking.plausibleDomain
+         * in data/site.ts gesetzt ist (null = kein externes Script im Build).
+         */}
+        {site.tracking.plausibleDomain && (
+          <script
+            defer
+            data-domain={site.tracking.plausibleDomain}
+            src="https://plausible.io/js/script.js"
+          />
+        )}
+      </head>
       <body className={`${inter.className} flex min-h-screen flex-col bg-white`}>
         <script
           type="application/ld+json"

@@ -44,6 +44,11 @@ export const site: SiteConfig = {
     // Google Search Console Meta-Tag-Verifikation (consent-frei, kein Tracking).
     // Eingetragen am 06.07.2026; gerendert über app/layout.tsx → metadata.verification.
     gscVerification: "GZ20BsQW7Cadiy-Zdl2ZKhmkn3wN9tSLCgAmol7Yafw",
+    // Plausible Analytics (cookielos, EU): erst befüllen, wenn das
+    // Plausible-Konto existiert UND die Datenschutzerklärung (Abschnitt 6)
+    // im selben Commit angepasst wird. Wert = data-domain ("tarvyo24.de").
+    // Solange null: kein externes Script im Build. Siehe DEPLOYMENT.md.
+    plausibleDomain: null,
     // GA4 / GTM: NIEMALS befüllen, bevor eine Consent-Lösung live ist.
     ga4Id: null,
     gtmId: null,

@@ -92,6 +92,24 @@ Es liegen **keine Zugangsdaten im Repository** — der Workflow funktioniert ers
 - ☐ Google Search Console einrichten: Property anlegen, Verifikations-Code in `data/site.ts` → `tracking.gscVerification` eintragen (consent-frei), neu deployen, Sitemap einreichen
 - ☐ Social-Preview testen (z. B. Link in Messenger einfügen → OG-Bild/Titel prüfen)
 
+## Webanalyse aktivieren (Plausible — vorbereitet, standardmäßig AUS)
+
+**Stand 06.07.2026:** Die Plausible-Integration ist im Code vorbereitet, aber **deaktiviert**. Gate: `data/site.ts` → `tracking.plausibleDomain` (aktuell `null`). Solange der Wert `null` ist, rendert der Build **kein** externes Script — verifiziert im statischen Export.
+
+Plausible ist cookielos und EU-gehostet; es wird ohne Cookies und ohne geräteübergreifende Identifier gemessen. Trotzdem gilt: **Die Datenschutzerklärung muss im selben Commit angepasst werden wie die Aktivierung** (Leitplanke „Datenschutz-Drift", PROJEKTPLAN/Bauabschnitt 2).
+
+**Aktivierungs-Checkliste:**
+
+1. ☐ **Plausible-Konto anlegen** (https://plausible.io, EU-Anbieter, kostenpflichtig ~9 €/Monat) und dort die Site `tarvyo24.de` hinzufügen
+2. ☐ **`plausibleDomain` setzen:** in `data/site.ts` → `tracking.plausibleDomain: "tarvyo24.de"` (Wert = die in Plausible eingetragene Domain, ohne `https://`)
+3. ☐ **Datenschutzerklärung Abschnitt 6 im selben Commit ausbauen** (`app/datenschutz/page.tsx`): Überschrift und Inhalt anpassen — Plausible als aktiver Dienst beschreiben (Anbieter Plausible Insights OÜ, Estland/EU; cookielos; keine Einwilligung über Banner, Rechtsgrundlage Art. 6 Abs. 1 lit. f DSGVO / berechtigtes Interesse an reichweitenbezogener Statistik; verarbeitete Daten; Hinweis auf Plausible-Datenschutzinfos). „Stand“-Datum der Erklärung aktualisieren. **Empfehlung: Formulierung vor dem Deploy vom Betreiber prüfen lassen.**
+4. ☐ **Build prüfen:** `npm run build` — danach stichprobenartig in `out/index.html` kontrollieren, dass das Script `plausible.io/js/script.js` mit korrektem `data-domain` im `<head>` liegt
+5. ☐ **Commit + Push auf `main`** (ein Commit für Gate + Datenschutzerklärung)
+6. ☐ **Deployment manuell auslösen:** GitHub → *Actions → „Deploy Tarvyo24" → Run workflow*
+7. ☐ **Nach dem Deploy verifizieren:** Live-Seite aufrufen → im Plausible-Dashboard erscheint der Besuch; zusätzlich prüfen, dass `/datenschutz/` den neuen Abschnitt 6 zeigt
+
+**Deaktivieren:** `plausibleDomain` wieder auf `null` setzen, Datenschutzerklärung zurückführen, Build, Commit, manueller Deploy.
+
 ## Rollback
 
 - Manuell: gesicherte `public_html`-ZIP zurückspielen (siehe Variante A, Schritt 2)
