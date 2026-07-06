@@ -73,6 +73,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     environment: production
+    # Obergrenze gegen hängende FTP-Verbindungen (Vorfall 06.07.2026):
+    # ein kompletter Neu-Upload dauert erfahrungsgemäß < 15 Minuten.
+    timeout-minutes: 30
     steps:
       - name: Export-Artefakt laden
         uses: actions/download-artifact@v4
@@ -96,3 +99,20 @@ jobs:
           # Fest "./": FTP-Login landet bereits im Webroot (public_html) —
           # siehe Kopfkommentar. Kein Secret mehr nötig.
           server-dir: ./
+          # ---- Robustheit (nach 550-/Timeout-Fehlern am 06.07.2026) ----
+          # 120 s statt 30 s Default: Hostinger-Shared-FTP antwortet bei
+          # rekursiven Listings/vielen kleinen Dateien (_next/static) unter
+          # Last langsam — der Default riss die Steuerverbindung ab
+          # ("Timeout (Steuerbuchse)" = control socket timeout).
+          timeout: 120000
+          # Neuer State-Dateiname: Der alte Sync-State auf dem Server ist
+          # durch einen abgebrochenen Lauf inkonsistent (Ursache der
+          # 550-Fehler auf /_next/static/...). Der neue Name erzwingt
+          # EINMALIG einen vollständigen Upload mit frischem State; danach
+          # wieder inkrementell. Die alte Datei .ftp-deploy-sync-state.json
+          # in public_html kann im Dateimanager gelöscht werden (optional).
+          # BEWUSST KEIN dangerous-clean-slate: das würde erst alles löschen
+          # und die Seite wäre bei einem erneuten Abbruch komplett weg.
+          state-name: .ftp-deploy-sync-state-v2.json
+          # Volles Log je Dateioperation — macht künftige Fehler zuordenbar.
+          log-level: verbose
