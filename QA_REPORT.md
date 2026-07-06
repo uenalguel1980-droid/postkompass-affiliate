@@ -137,3 +137,29 @@ Verbleibende Empfehlungen (rein kosmetisch/vorsorglich):
 
 1. **www→non-www-Redirect** im Hostinger-Panel einrichten (www liefert derzeit 200 statt 301; durch Canonicals gemildert)
 2. Bei künftigen Änderungen an Hostinger-Sicherheitseinstellungen: Crawler-Erreichbarkeit von robots.txt/sitemap.xml erneut prüfen (CDN-Stufe muss auf „Low" bleiben)
+
+---
+
+# Deploy-Reparatur: FTP-Sync-Fehler 550 → Clean-Deploy (06.07.2026) ✅
+
+**Vorfall:** Nach dem Go-Live scheiterten weitere Deployments im FTP-Schritt (`FTPError 550` auf `/_next/static/...`, danach Control-Socket-Timeout). Ursache: abgebrochene Sync-Läufe (30-s-Default-Timeout der FTP-Action) hinterließen auf dem Server einen teilweise übertragenen `_next/`-Baum und eine inkonsistente Sync-State-Datei — Details in DEPLOYMENT.md.
+
+**Behebung in zwei Stufen (Commits `1b0b5a0` + `c568583`):**
+
+1. Workflow-Härtung: FTP-Timeout 120 s, Verbose-Logging, neuer State-Name, Job-Timeout 30 min
+2. **Einmaliger Clean-Deploy am 06.07.2026 erfolgreich durchgeführt** (`dangerous-clean-slate` über die neue Workflow-Checkbox) — `public_html` vollständig neu aufgebaut, **der 550-Sync-Fehler ist damit behoben**
+
+**Der Workflow besitzt jetzt zwei Modi:**
+
+- **Normaler Deploy (Standard, Checkbox aus):** inkrementeller Sync — für alle regulären Deployments. **Künftige Deployments immer ohne Clean-Deploy-Haken starten.**
+- **Clean-Deploy (Checkbox an):** kompletter Neuaufbau von `public_html` — nur für Reparaturfälle bei Sync-Schäden (Checkliste in DEPLOYMENT.md: vorher ZIP-Backup, danach Redirect-Prüfung)
+
+**Live-Stichprobe nach jedem Clean-Deploy (Standard-Prüfset):**
+
+- ☐ Startseite `https://tarvyo24.de/`
+- ☐ `/datenschutz/`
+- ☐ `/robots.txt`
+- ☐ `/sitemap.xml`
+- ☐ ein wichtiger Ratgeber (z. B. `/ratgeber/buchhaltungssoftware-selbststaendige/`)
+
+**Wartungspunkt (nicht kritisch):** Im Workflow-Lauf erscheint eine **Node.js-20-Warnung** (GitHub migriert die Actions-Umgebung Richtung Node 24). Für den Betrieb unkritisch; später als technischer Wartungspunkt prüfen: Umstellung des Build-Jobs auf Node 24 inkl. grünem CI-Build (siehe DEPLOYMENT.md, Wartungshinweis).

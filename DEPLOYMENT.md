@@ -89,6 +89,10 @@ Beim manuellen Start (*Run workflow*) gibt es eine Checkbox **„Clean-Deploy"**
 
 **Hintergrund (Vorfall 06.07.2026):** Mehrere abgebrochene FTP-Läufe (Ursache: 30-s-Default-Timeout) hinterließen unter `_next/static/` einen teilweise übertragenen, inkonsistenten Dateibaum und eine veraltete Sync-State-Datei. Folge: `FTPError 550` bei Folgeläufen. Der Timeout wurde auf 120 s erhöht, der State-Name auf v2 gewechselt und der Clean-Deploy-Modus als kontrollierter Reparaturweg ergänzt. Nicht betroffen von Clean-Deploys: E-Mail-Postfächer, SSL-Zertifikate, DNS, CDN-Einstellungen (liegen alle außerhalb von `public_html`).
 
+**✅ Auflösung (06.07.2026):** Der einmalige **Clean-Deploy wurde erfolgreich durchgeführt** — der 550-Sync-Fehler ist damit behoben, der Serverbaum und die v2-State-Datei sind konsistent. **Alle künftigen Deployments laufen standardmäßig OHNE den Clean-Deploy-Haken** (inkrementeller Sync); die Checkbox bleibt ausschließlich für Reparaturfälle. Nach jedem Clean-Deploy live prüfen: Startseite, /datenschutz/, robots.txt, sitemap.xml und ein wichtiger Ratgeber (z. B. /ratgeber/buchhaltungssoftware-selbststaendige/).
+
+**Wartungshinweis (nicht kritisch):** Der Workflow-Lauf zeigt eine Node.js-20-Warnung (GitHub stellt die Actions-Umgebung schrittweise auf Node 24 um). Kein Handlungsbedarf für den Betrieb — bei Gelegenheit als technischen Wartungspunkt prüfen: `node-version: 24` im Build-Job testen (lokaler Build und CI müssen grün bleiben) und die verwendeten Actions-Versionen aktualisieren.
+
 ## Hostinger-Hinweise
 
 - Zielverzeichnis ist das Web-Root der Domain, üblicherweise `public_html/`
