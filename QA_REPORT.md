@@ -75,8 +75,8 @@ Alle 10 Seitentypen einzeln geprüft (Startseite, beide Übersichten, Kategorie-
 
 **🔴 Offene Go-Live-Blocker (Stand 06.07.2026, siehe DEPLOYMENT.md):**
 1. ~~Echte Betreiberangaben ins Impressum~~ — **erledigt 06.07.2026** (Marija Beisler, Einzelunternehmen, Duingen; ohne USt-ID/Steuernummer; VSBG-Standarderklärung zur Bestätigung durch Betreiber)
-2. Finale Datenschutzerklärung (DSGVO) — weiterhin Platzhalter, **offen**
-3. Datenschutz-Banner entfernen nach finalem Text (Impressum-Banner bereits entfernt; noindex-Entscheidung getroffen: Rechtsseiten dauerhaft noindex)
+2. ~~Finale Datenschutzerklärung~~ — **eingepflegt 06.07.2026** (19 Abschnitte, passt zum technischen Ist-Zustand); Empfehlung: finale Prüfung durch den Betreiber vor Livegang
+3. ~~Banner/noindex~~ — **erledigt 06.07.2026** (beide Banner entfernt; Rechtsseiten dauerhaft noindex, Inhaltsseiten indexierbar)
 4. Postfach info@tarvyo24.de einrichten und testen — **offen**
 
 ## Gefundene & behobene Fehler
