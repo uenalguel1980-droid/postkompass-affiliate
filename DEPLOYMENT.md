@@ -71,6 +71,24 @@ Es liegen **keine Zugangsdaten im Repository** — der Workflow funktioniert ers
 
 **Verwendete Action:** `SamKirkland/FTP-Deploy-Action@v4.3.5` — etablierte Standard-Action für statische FTP/FTPS-Deployments: inkrementeller Sync (lädt nur Änderungen), löscht per Default nichts, benötigt keine erweiterten Workflow-Rechte (`permissions: contents: read`), Version gepinnt.
 
+### Zwei Deploy-Modi (seit 06.07.2026)
+
+Beim manuellen Start (*Run workflow*) gibt es eine Checkbox **„Clean-Deploy"**:
+
+- **Checkbox AUS (Standard):** normaler inkrementeller Sync gegen die serverseitige State-Datei (`.ftp-deploy-sync-state-v2.json`). Für alle regulären Deployments.
+- **Checkbox AN (nur zur Reparatur):** `dangerous-clean-slate` — löscht **alle** Dateien in `public_html` und lädt den kompletten Export frisch hoch. Nur verwenden, wenn der inkrementelle Sync mit 550-Fehlern scheitert (beschädigter Serverbaum durch abgebrochene Läufe).
+
+**Checkliste für einen Clean-Deploy:**
+
+1. ☐ ZIP-Backup von `public_html` im Hostinger-Dateimanager anlegen (Rollback-Vorsorge)
+2. ☐ Notieren, ob `.htaccess` und/oder `.well-known/` in `public_html` existieren — beide werden mitgelöscht!
+3. ☐ Workflow mit Checkbox „Clean-Deploy" starten; Dauer: mehrere Minuten, **die Seite ist währenddessen nicht erreichbar**
+4. ☐ Danach prüfen: Startseite, 2–3 Unterseiten, `robots.txt`, `sitemap.xml` (alle HTTP 200)
+5. ☐ **http→https-Redirect testen** (`http://tarvyo24.de` muss 301 auf https liefern). Falls der Redirect über eine gelöschte `.htaccess` lief: im Hostinger-Panel „HTTPS erzwingen" erneut aktivieren
+6. ☐ CDN-Sicherheitsstufe unverändert „Low"? (Nur relevant, falls im Panel gearbeitet wurde — nach Panel-Änderungen Crawler-Zugriff auf robots.txt/sitemap.xml erneut prüfen)
+
+**Hintergrund (Vorfall 06.07.2026):** Mehrere abgebrochene FTP-Läufe (Ursache: 30-s-Default-Timeout) hinterließen unter `_next/static/` einen teilweise übertragenen, inkonsistenten Dateibaum und eine veraltete Sync-State-Datei. Folge: `FTPError 550` bei Folgeläufen. Der Timeout wurde auf 120 s erhöht, der State-Name auf v2 gewechselt und der Clean-Deploy-Modus als kontrollierter Reparaturweg ergänzt. Nicht betroffen von Clean-Deploys: E-Mail-Postfächer, SSL-Zertifikate, DNS, CDN-Einstellungen (liegen alle außerhalb von `public_html`).
+
 ## Hostinger-Hinweise
 
 - Zielverzeichnis ist das Web-Root der Domain, üblicherweise `public_html/`

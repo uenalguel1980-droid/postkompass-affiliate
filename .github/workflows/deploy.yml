@@ -34,6 +34,14 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      clean_deploy:
+        description: >-
+          Clean-Deploy: public_html KOMPLETT leeren und alles neu hochladen.
+          Nur zur Reparatur nach Sync-Fehlern. Vorher ZIP-Backup im
+          Hostinger-Dateimanager, danach http→https-Redirect prüfen!
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -105,14 +113,20 @@ jobs:
           # Last langsam — der Default riss die Steuerverbindung ab
           # ("Timeout (Steuerbuchse)" = control socket timeout).
           timeout: 120000
-          # Neuer State-Dateiname: Der alte Sync-State auf dem Server ist
-          # durch einen abgebrochenen Lauf inkonsistent (Ursache der
-          # 550-Fehler auf /_next/static/...). Der neue Name erzwingt
-          # EINMALIG einen vollständigen Upload mit frischem State; danach
-          # wieder inkrementell. Die alte Datei .ftp-deploy-sync-state.json
+          # Sync-State liegt NUR serverseitig (der Runner ist flüchtig).
+          # v2-Name seit 06.07.2026: umgeht den durch abgebrochene Läufe
+          # inkonsistenten alten State. Die alte .ftp-deploy-sync-state.json
           # in public_html kann im Dateimanager gelöscht werden (optional).
-          # BEWUSST KEIN dangerous-clean-slate: das würde erst alles löschen
-          # und die Seite wäre bei einem erneuten Abbruch komplett weg.
           state-name: .ftp-deploy-sync-state-v2.json
           # Volles Log je Dateioperation — macht künftige Fehler zuordenbar.
           log-level: verbose
+          # ---- Zwei Modi (06.07.2026, nach anhaltenden 550-Fehlern) ----
+          # Standard (Checkbox aus): inkrementeller Sync — Normalfall.
+          # Clean-Deploy (Checkbox beim manuellen Start): löscht VORAB ALLE
+          # Dateien unter server-dir (auch .htaccess/.well-known, falls
+          # vorhanden!) und lädt alles frisch hoch. Einziger zuverlässiger
+          # Weg, einen durch Teil-Uploads beschädigten _next/-Baum zu
+          # reparieren — die Action kann fehlgeschlagene Einzeloperationen
+          # nicht überspringen. NUR bei Sync-Fehlern verwenden; vorher
+          # ZIP-Backup, danach Redirect-/Stichprobenprüfung (DEPLOYMENT.md).
+          dangerous-clean-slate: ${{ inputs.clean_deploy == true }}
