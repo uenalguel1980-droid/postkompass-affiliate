@@ -8,8 +8,8 @@
 
 ## Ergebnis in Kürze
 
-**QA bestanden: JA** — bereit für Schritt 11 (Commit/Push nach Freigabe).
-**Deployment (Schritt 12) bleibt blockiert**, bis die Go-Live-Blocker (unten) erfüllt sind.
+**QA bestanden: JA** — Schritte 11 und 12 sind inzwischen abgeschlossen.
+**Die Seite ist seit 06.07.2026 live** (https://tarvyo24.de) — siehe Abschnitt „Nach-Go-Live-QA" am Ende dieses Reports.
 
 ---
 
@@ -100,3 +100,33 @@ In dieser QA-Runde wurden **keine neuen Fehler** gefunden. Während der Entwickl
 
 **Bereit für Schritt 11 (erster Commit + Push) — Freigabe durch den Betreiber vorausgesetzt.**
 Nicht bereit für Schritt 12 (Deployment), bis die vier Go-Live-Blocker erfüllt sind.
+*(Beides inzwischen erfolgt — siehe unten.)*
+
+---
+
+# Nach-Go-Live-QA (06.07.2026) ✅
+
+**Deployment erfolgreich** — Seite live unter https://tarvyo24.de (GitHub Action, manuell ausgelöst; Fixes auf dem Weg: `security: loose` für FTPS-über-IP, `server-dir: ./` gegen doppeltes public_html).
+
+## Kritischer Vorfall — gefunden und behoben
+
+Die **Hostinger-CDN-Bot-Protection** (Stufe „Medium") lieferte an alle Nicht-Browser-Clients eine JS-Challenge-Seite mit `noindex,nofollow` aus — auch für robots.txt und sitemap.xml, ohne Ausnahme für Googlebot-User-Agents. Folge: Crawler, Link-Previews und PageSpeed wären blockiert gewesen. **Behoben durch Umstellung der CDN-Sicherheitsstufe auf „Low"** (Hostinger-Panel). Anschließend von externem Standpunkt verifiziert.
+
+## Live-Prüfergebnisse
+
+| Prüfpunkt | Ergebnis |
+|---|---|
+| Erreichbarkeit | ✅ alle 23 Seiten + og.png + icon.svg HTTP 200, SSL gültig, http→https 301 |
+| robots.txt | ✅ echte Textdatei (extern als Nicht-Browser-Client verifiziert) |
+| sitemap.xml | ✅ echte XML-Sitemap, alle 19 URLs einzeln verifiziert (Trailing Slash, Rechtsseiten ausgeschlossen) |
+| Startseite | ✅ echte Inhalte an Nicht-Browser-Clients (H1, Sektionen bestätigt) |
+| 404 | ✅ Status 404 für unbekannte Pfade |
+| OG-Image | ✅ image/png, 20 kB |
+| Kompression | ✅ Brotli aktiv |
+| Google Search Console | ✅ **verifiziert** (Meta-Tag, Commit 1a76a25) und **Sitemap erfolgreich eingereicht** |
+
+## Verbleibende Empfehlungen (keine Blocker)
+
+1. **www→non-www-Redirect** im Hostinger-Panel einrichten (www liefert derzeit 200 statt 301; durch Canonicals gemildert)
+2. **PageSpeed Insights** auf die Live-URL laufen lassen (Ziel ≥ 90 — lokal nie gemessen, Erwartung aufgrund der Architektur positiv)
+3. Bei künftigen Änderungen an Hostinger-Sicherheitseinstellungen: Crawler-Erreichbarkeit von robots.txt/sitemap.xml erneut prüfen

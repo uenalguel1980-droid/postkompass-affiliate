@@ -2,13 +2,13 @@
 
 **Domain:** https://tarvyo24.de
 **Artefakt:** Inhalt von `out/` nach `npm run build`
-**Stand:** 06.07.2026 — Deployment vorbereitet, **noch nicht live geschaltet**
+**Stand:** 06.07.2026 — **✅ LIVE.** Deployment erfolgreich, Nach-Go-Live-QA bestanden, Search Console verifiziert, Sitemap eingereicht.
 
 ---
 
 ## 🔴 Finale Go-Live-Checkliste
 
-**Stand der Vorbereitung (06.07.2026):** Technisch ist alles bereit; die Punkte 1–3 sind offene Blocker, die nur der Betreiber liefern kann. Reihenfolge einhalten — erst wenn 1–6 erledigt sind, darf deployed werden.
+**Stand 06.07.2026: Alle Punkte abgearbeitet — die Seite ist live.** Die Checkliste bleibt als Referenz für künftige Deployments erhalten.
 
 **Vor dem Deployment (Blocker):**
 
@@ -18,20 +18,22 @@
    ⚠️ **Empfehlung:** Betreiber sollte den Text vor dem Livegang final gegenlesen/prüfen (lassen). **Bei späteren Änderungen nachziehen:** Analytics-Einführung, aktive Affiliate-Netzwerke (Netzwerk-Tracking!), Kontaktformular, Newsletter (siehe Abschnitt 19 der Erklärung).
 3. ☑ **info@tarvyo24.de funktioniert** — **erledigt 06.07.2026**: Postfach bei Hostinger eingerichtet, aktiv und erfolgreich getestet (Testmail + Rückantwort). Adresse wird auf /kontakt und im Impressum verwendet (zentrale Quelle: `data/site.ts`)
 4. ☑ **Banner/noindex geprüft** — **erledigt 06.07.2026**: Beide Rechtsseiten sind final, beide PlaceholderNotice-Banner entfernt. **noindex-Entscheidung:** beide Rechtsseiten bleiben dauerhaft `noindex, follow` (kein SEO-Wert, über Footer erreichbar — Impressumspflicht dadurch unberührt); alle Inhaltsseiten indexierbar.
-5. ☐ **Domain/SSL aktiv** — tarvyo24.de zeigt aufs Hosting, Let's-Encrypt aktiv, https erzwungen, www→non-www
-6. ☐ **GitHub Secrets eingetragen** (FTP_SERVER, FTP_USERNAME, FTP_PASSWORD, FTP_TARGET_DIR)
+5. ☑ **Domain/SSL aktiv** — **erledigt**: tarvyo24.de liefert über https mit gültigem Zertifikat, http→https-Redirect (301) verifiziert. ⚠️ Offen als Kosmetik: www→non-www-Redirect (www liefert 200 statt 301; durch Canonical-Tags gemildert — bei Gelegenheit im Hostinger-Panel einrichten)
+6. ☑ **GitHub Secrets eingetragen** — **erledigt** (FTP_SERVER als IP, FTP_USERNAME, FTP_PASSWORD; FTP_TARGET_DIR entfällt, server-dir fest `./`)
 
 **Deployment:**
 
-7. ☐ **Deployment manuell auslösen** — GitHub → Actions → „Deploy Tarvyo24" → Run workflow
+7. ☑ **Deployment ausgelöst** — **erledigt 06.07.2026**: manueller Workflow-Lauf erfolgreich, Upload direkt ins Webroot (nach zwei behobenen Anlaufproblemen: `security: loose` wegen FTP-über-IP, `server-dir: ./` wegen FTP-Login im Webroot)
 
 **Nach dem Deployment:**
 
-8. ☐ **Live-Seite geprüft** — Stichproben: /, /kategorien/handyvertrag/, /ratgeber/handyvertrag-vergleichen/, /impressum/, /datenschutz/, Fantasie-URL (→ 404)
-9. ☐ **sitemap.xml erreichbar** — https://tarvyo24.de/sitemap.xml
-10. ☐ **robots.txt erreichbar** — https://tarvyo24.de/robots.txt
-11. ☐ **PageSpeed geprüft** — PageSpeed Insights auf Live-URL, Ziel ≥ 90 in allen Kategorien
-12. ☐ Google Search Console einrichten + Sitemap einreichen (siehe unten)
+8. ☑ **Live-Seite geprüft** — **erledigt 06.07.2026**: alle 23 Seiten + Assets HTTP 200, 404-Status korrekt, Startseite/Impressum/Datenschutz inhaltlich verifiziert, Brotli-Kompression aktiv
+9. ☑ **sitemap.xml erreichbar** — **erledigt**: echte XML-Sitemap, alle 19 URLs einzeln verifiziert
+10. ☑ **robots.txt erreichbar** — **erledigt**: korrekte Textdatei mit Sitemap-Verweis
+11. ☐ **PageSpeed geprüft** — offen (empfohlen: PageSpeed Insights auf https://tarvyo24.de/, Ziel ≥ 90)
+12. ☑ **Google Search Console** — **erledigt 06.07.2026**: Property per Meta-Tag verifiziert (Code in data/site.ts), **Sitemap erfolgreich eingereicht**
+
+**Wichtiger Vorfall + Lösung (06.07.2026):** Die Hostinger-CDN-Bot-Protection (Sicherheitsstufe „Medium") lieferte an alle Nicht-Browser-Clients — auch Crawler, inklusive robots.txt/sitemap.xml — eine JS-Challenge-Seite mit noindex aus. **Behoben durch Umstellung der CDN-Sicherheitsstufe auf „Low"**; danach extern verifiziert, dass robots.txt, sitemap.xml und Seiteninhalte an Nicht-Browser-Clients korrekt ausgeliefert werden. Bei künftigen Änderungen an Hostinger-Sicherheitseinstellungen diesen Punkt erneut prüfen.
 
 ---
 
