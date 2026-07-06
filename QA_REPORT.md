@@ -77,7 +77,9 @@ Alle 10 Seitentypen einzeln geprüft (Startseite, beide Übersichten, Kategorie-
 1. ~~Echte Betreiberangaben ins Impressum~~ — **erledigt 06.07.2026** (Marija Beisler, Einzelunternehmen, Duingen; ohne USt-ID/Steuernummer; VSBG-Standarderklärung zur Bestätigung durch Betreiber)
 2. ~~Finale Datenschutzerklärung~~ — **eingepflegt 06.07.2026** (19 Abschnitte, passt zum technischen Ist-Zustand); Empfehlung: finale Prüfung durch den Betreiber vor Livegang
 3. ~~Banner/noindex~~ — **erledigt 06.07.2026** (beide Banner entfernt; Rechtsseiten dauerhaft noindex, Inhaltsseiten indexierbar)
-4. Postfach info@tarvyo24.de einrichten und testen — **offen**
+4. ~~Postfach info@tarvyo24.de~~ — **erledigt 06.07.2026** (bei Hostinger eingerichtet, Testmail + Rückantwort erfolgreich)
+
+**Damit sind alle vier ursprünglichen Go-Live-Blocker abgearbeitet.** Vor dem Deployment verbleiben: finale Betreiber-Prüfung der Rechtstexte (Empfehlung), Domain/SSL bei Hostinger, GitHub-Secrets (siehe DEPLOYMENT.md).
 
 ## Gefundene & behobene Fehler
 
