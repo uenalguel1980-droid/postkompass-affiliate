@@ -30,7 +30,7 @@
 8. ☑ **Live-Seite geprüft** — **erledigt 06.07.2026**: alle 23 Seiten + Assets HTTP 200, 404-Status korrekt, Startseite/Impressum/Datenschutz inhaltlich verifiziert, Brotli-Kompression aktiv
 9. ☑ **sitemap.xml erreichbar** — **erledigt**: echte XML-Sitemap, alle 19 URLs einzeln verifiziert
 10. ☑ **robots.txt erreichbar** — **erledigt**: korrekte Textdatei mit Sitemap-Verweis
-11. ☐ **PageSpeed geprüft** — offen (empfohlen: PageSpeed Insights auf https://tarvyo24.de/, Ziel ≥ 90)
+11. ☑ **PageSpeed geprüft** — **erledigt 06.07.2026**: Mobile Performance 100 / Accessibility 96 / Best Practices 100 / SEO 100 / Agentic Browsing 2/2; Desktop vollständig grün (100 %)
 12. ☑ **Google Search Console** — **erledigt 06.07.2026**: Property per Meta-Tag verifiziert (Code in data/site.ts), **Sitemap erfolgreich eingereicht**
 
 **Wichtiger Vorfall + Lösung (06.07.2026):** Die Hostinger-CDN-Bot-Protection (Sicherheitsstufe „Medium") lieferte an alle Nicht-Browser-Clients — auch Crawler, inklusive robots.txt/sitemap.xml — eine JS-Challenge-Seite mit noindex aus. **Behoben durch Umstellung der CDN-Sicherheitsstufe auf „Low"**; danach extern verifiziert, dass robots.txt, sitemap.xml und Seiteninhalte an Nicht-Browser-Clients korrekt ausgeliefert werden. Bei künftigen Änderungen an Hostinger-Sicherheitseinstellungen diesen Punkt erneut prüfen.

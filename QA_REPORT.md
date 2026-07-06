@@ -124,9 +124,16 @@ Die **Hostinger-CDN-Bot-Protection** (Stufe „Medium") lieferte an alle Nicht-B
 | OG-Image | ✅ image/png, 20 kB |
 | Kompression | ✅ Brotli aktiv |
 | Google Search Console | ✅ **verifiziert** (Meta-Tag, Commit 1a76a25) und **Sitemap erfolgreich eingereicht** |
+| PageSpeed Insights (Mobile) | ✅ **Performance 100 · Accessibility 96 · Best Practices 100 · SEO 100 · Agentic Browsing 2/2** |
+| PageSpeed Insights (Desktop) | ✅ **vollständig grün (100 %)** |
 
-## Verbleibende Empfehlungen (keine Blocker)
+**PageSpeed-Fazit:** Das Lighthouse-Ziel aus Schritt 10 („alle Kategorien ≥ 90") ist auf der Live-URL erreicht und übertroffen — die in der ursprünglichen QA aufgeschobene Messung ist damit nachgeholt. Einziger Wert unter 100: Accessibility 96 (Mobile) — weit über dem Ziel, kein Handlungsbedarf.
+
+## Abschluss-Status (06.07.2026)
+
+**Keine kritischen Go-Live-Blocker mehr offen.** Alle vier ursprünglichen Blocker erledigt, Deployment erfolgreich, Crawler-Blocker (Hostinger-CDN) durch Sicherheitsstufe **Low** behoben, Search Console verifiziert, Sitemap eingereicht, PageSpeed-Ziele übertroffen.
+
+Verbleibende Empfehlungen (rein kosmetisch/vorsorglich):
 
 1. **www→non-www-Redirect** im Hostinger-Panel einrichten (www liefert derzeit 200 statt 301; durch Canonicals gemildert)
-2. **PageSpeed Insights** auf die Live-URL laufen lassen (Ziel ≥ 90 — lokal nie gemessen, Erwartung aufgrund der Architektur positiv)
-3. Bei künftigen Änderungen an Hostinger-Sicherheitseinstellungen: Crawler-Erreichbarkeit von robots.txt/sitemap.xml erneut prüfen
+2. Bei künftigen Änderungen an Hostinger-Sicherheitseinstellungen: Crawler-Erreichbarkeit von robots.txt/sitemap.xml erneut prüfen (CDN-Stufe muss auf „Low" bleiben)
