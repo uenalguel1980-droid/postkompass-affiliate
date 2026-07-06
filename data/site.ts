@@ -41,8 +41,9 @@ export const site: SiteConfig = {
   affiliateShortNotice:
     "Diese Seite finanziert sich über Partnerlinks (Werbung). Für dich entstehen dadurch keine Mehrkosten.",
   tracking: {
-    // Google Search Console Meta-Tag (consent-frei) — aktivieren, sobald gewünscht.
-    gscVerification: null,
+    // Google Search Console Meta-Tag-Verifikation (consent-frei, kein Tracking).
+    // Eingetragen am 06.07.2026; gerendert über app/layout.tsx → metadata.verification.
+    gscVerification: "GZ20BsQW7Cadiy-Zdl2ZKhmkn3wN9tSLCgAmol7Yafw",
     // GA4 / GTM: NIEMALS befüllen, bevor eine Consent-Lösung live ist.
     ga4Id: null,
     gtmId: null,

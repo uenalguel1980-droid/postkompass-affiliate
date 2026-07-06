@@ -44,6 +44,12 @@ export const metadata: Metadata = {
     description: site.defaultDescription,
     images: ["/og.png"],
   },
+  // Google-Search-Console-Verifikation (consent-frei, kein Tracking) —
+  // rendert <meta name="google-site-verification" content="..."> im <head>,
+  // sobald der Code in site.ts gesetzt ist.
+  ...(site.tracking.gscVerification && {
+    verification: { google: site.tracking.gscVerification },
+  }),
 };
 
 /*
