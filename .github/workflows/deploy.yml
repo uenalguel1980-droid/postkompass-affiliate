@@ -81,5 +81,10 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
+          # security: loose — Hostinger-FTP ist nur per IP erreichbar; ein
+          # TLS-Zertifikat kann gegen eine IP nie validieren. Verbindung
+          # bleibt vollstaendig TLS-verschluesselt (AUTH SSL), nur die
+          # Zertifikatsnamens-Pruefung entfaellt. Diagnose: 06.07.2026.
+          security: loose
           local-dir: out/
           server-dir: ${{ secrets.FTP_TARGET_DIR }}
