@@ -13,9 +13,14 @@ import type { Category, Partner, PartnerNetwork } from "@/types";
  * - SubID-Tracking ist vorbereitet (appendSubId), wird aber in v1 nicht genutzt.
  */
 
-/** rel-Attribut für alle ausgehenden Partnerlinks (Google-Vorgabe für Affiliate). */
+/**
+ * rel-Attribut für alle ausgehenden Partnerlinks: sponsored/nofollow
+ * (Google-Vorgabe für Affiliate), noopener/noreferrer (Sicherheit bei
+ * target="_blank"; Awin-Tracking läuft über URL-Parameter und braucht
+ * keinen Referer). Seit 07.07.2026 inkl. noreferrer.
+ */
 export function buildRelAttribute(): string {
-  return "sponsored nofollow noopener";
+  return "sponsored nofollow noopener noreferrer";
 }
 
 /**

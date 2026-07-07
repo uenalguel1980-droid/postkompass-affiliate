@@ -5,13 +5,17 @@ import type { Partner } from "@/types";
  * Komponenten greifen nie direkt hierauf zu, sondern über lib/affiliate.ts.
  *
  * ============================================================================
- * v1-LEITPLANKE (HART):
- * - affiliateUrl ist bei ALLEN Partnern null. Keine echten Affiliate-Links
- *   im ersten Commit. Echte Links werden später AUSSCHLIESSLICH hier
- *   eingetragen (Feld affiliateUrl + status: "active"), nie in Komponenten.
- * - status ist bei ALLEN Partnern "placeholder".
- * - Die Namen sind neutrale Platzhalter. Echte Partnernamen/Logos erst nach
- *   Aufnahme in das jeweilige Partnerprogramm (Netzwerk-Freigabe beachten).
+ * LEITPLANKE (HART):
+ * - Echte Affiliate-Links werden AUSSCHLIESSLICH hier eingetragen
+ *   (Feld affiliateUrl + status: "active"), nie in Komponenten.
+ * - affiliateUrl nur https, nur zugelassene Programme, SubID nach
+ *   PARTNER.md-Konvention. Echte Partnernamen/Logos erst nach Aufnahme
+ *   in das jeweilige Partnerprogramm (Netzwerk-Freigabe beachten).
+ * - Alle übrigen Partner bleiben Platzhalter (affiliateUrl: null,
+ *   status: "placeholder"), bis ihre Programme zugelassen sind.
+ * - ERSTE AKTIVIERUNG 07.07.2026: buchhaltung-cloud = Lexware Office
+ *   (Awin 13787) — Pilot in unkritischer Kategorie, DSE Abschnitt 7
+ *   im selben Zug angepasst.
  * ============================================================================
  *
  * Vorbereitete Netzwerke/Programme (Feld network):
@@ -169,20 +173,26 @@ export const partners: Partner[] = [
   // --- Buchhaltungssoftware ---------------------------------------------------
   {
     id: "buchhaltung-cloud",
-    name: "Cloud-Buchhaltungssoftware (Platzhalter)",
+    name: "Lexware Office",
     description:
-      "Buchhaltungslösung für Selbstständige und kleine Unternehmen: Angebote, Rechnungen, EÜR und Umsatzsteuervoranmeldung.",
+      "Cloud-Buchhaltungssoftware für Selbstständige und kleine Unternehmen: Angebote, Rechnungen inklusive E-Rechnung, Belegerfassung, EÜR und Umsatzsteuervoranmeldung.",
     features: [
-      "Rechnungen und Angebote erstellen",
-      "EÜR und UStVA vorbereitet",
-      "Schnittstelle zum Steuerberater",
+      "Angebote und Rechnungen inkl. E-Rechnung (XRechnung/ZUGFeRD)",
+      "Belege digital erfassen, GoBD-konforme Ablage",
+      "EÜR und Umsatzsteuervoranmeldung (ELSTER)",
+      "Bankabgleich und DATEV-Anbindung für die Steuerkanzlei",
     ],
-    affiliateUrl: null,
+    // Awin-Deeplink (Programm 13787, Lexware Office DE) — SubID per
+    // clickref nach PARTNER.md-Konvention: tarvyo24_[kategorie]_[platzierung].
+    affiliateUrl:
+      "https://www.awin1.com/cread.php?awinmid=13787&awinaffid=2974305&ued=https%3A%2F%2Fwww.lexware.de%2Fbuchhaltungssoftware%2F&clickref=tarvyo24_buchhaltungssoftware_partnercard",
     fallbackUrl: "#",
     categorySlugs: ["buchhaltungssoftware", "gewerbe-tools"],
-    status: "placeholder",
+    status: "active",
     network: "awin",
     sensitive: false,
+    activationNote:
+      "Awin-Programm 13787 (Lexware Office DE), zugelassen, aktiviert am 07.07.2026. Zielseite lexware.de/buchhaltungssoftware/. SubID über clickref-Parameter. Erste echte Aktivierung (Pilot Bauabschnitt 2); DSE Abschnitt 7 im selben Zug angepasst.",
   },
   {
     id: "buchhaltung-rechnungstool",

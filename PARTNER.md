@@ -1,6 +1,6 @@
 # PARTNER.md — Affiliate-Aktivierungs-Runbook (Tarvyo24)
 
-**Stand:** 06.07.2026 · **Status:** Alle 16 Partner sind Platzhalter (`affiliateUrl: null`, `status: "placeholder"`). Keine echten Affiliate-Links aktiv, keine Netzwerk-Zusagen vorhanden.
+**Stand:** 07.07.2026 · **Status:** Erste Aktivierung erfolgt — `buchhaltung-cloud` = **Lexware Office** (Awin-Programm 13787, `status: "active"`, Pilot in unkritischer Kategorie). Die übrigen 15 Partner bleiben Platzhalter (`affiliateUrl: null`, `status: "placeholder"`).
 
 Dieses Dokument ist der verbindliche Prozess, um später echte Partnerprogramme zu aktivieren — ohne rechtliche oder technische Fehler. Es ergänzt [PROJEKTPLAN.md](PROJEKTPLAN.md) (Architektur) und [DEPLOYMENT.md](DEPLOYMENT.md) (Deploy-Runbook).
 
@@ -9,7 +9,7 @@ Dieses Dokument ist der verbindliche Prozess, um später echte Partnerprogramme 
 ## 1. Grundregeln (gelten immer, keine Ausnahmen)
 
 1. **Einzige Link-Quelle:** Echte Affiliate-URLs stehen ausschließlich in `data/partners.ts` (Feld `affiliateUrl`), niemals in Komponenten, Artikeln oder sonstigen Dateien. Komponenten beziehen Links nur über `lib/affiliate.ts`.
-2. **rel-Attribut:** Jeder ausgehende Partnerlink trägt `rel="sponsored nofollow noopener"` — zentral erzeugt durch `buildRelAttribute()` in `lib/affiliate.ts`. Nicht überschreiben.
+2. **rel-Attribut:** Jeder ausgehende Partnerlink trägt `rel="sponsored nofollow noopener noreferrer"` — zentral erzeugt durch `buildRelAttribute()` in `lib/affiliate.ts`. Nicht überschreiben.
 3. **Werbekennzeichnung:** Badge `variant="ad"` an jedem Werbeplatz und `AffiliateDisclosure` vor Werbeblöcken bleiben bestehen. Ein aktivierter Partner ändert daran nichts — die Kennzeichnung existiert bereits.
 4. **Datenschutz im selben Commit:** Jede Aktivierung, die Datenflüsse ändert (erster echter Link eines Netzwerks), wird im **selben Commit** mit der Anpassung der Datenschutzerklärung (Abschnitt 7) committet. Niemals „Link zuerst, Datenschutz später".
 5. **Deployment bleibt manuell:** Push auf `main` baut nur (CI). Live geht eine Aktivierung erst durch *Actions → „Deploy Tarvyo24" → Run workflow* (Betreiberin).
@@ -67,7 +67,7 @@ Für **jeden einzelnen Partner** vollständig abarbeiten. Keine Sammel-Aktivieru
 **Rechtliche Prüfung:**
 
 6. ☐ **Affiliate-Hinweis sichtbar** — auf der betroffenen Kategorieseite (und ggf. Ratgeberseite) lokal prüfen: Badge „Anzeige" am Werbeplatz + `AffiliateDisclosure` vor dem Werbeblock werden gerendert.
-7. ☐ **rel geprüft** — der gerenderte Link trägt `rel="sponsored nofollow noopener"` (im Build-Output bzw. Browser-DevTools nachsehen, nicht nur im Code).
+7. ☐ **rel geprüft** — der gerenderte Link trägt `rel="sponsored nofollow noopener noreferrer"` (im Build-Output bzw. Browser-DevTools nachsehen, nicht nur im Code).
 8. ☐ **Datenschutz Abschnitt 7 geprüft/ergänzt** — `app/datenschutz/page.tsx`: Beim **ersten echten Link überhaupt** muss die Aussage „keine echten Affiliate-Links aktiv" ersetzt werden durch die Beschreibung des tatsächlichen Zustands (welche Netzwerke, was beim Klick passiert, Verantwortlichkeit des Netzwerks). Bei jedem **weiteren Netzwerk**: prüfen, ob es bereits abgedeckt ist, sonst ergänzen. „Stand"-Datum aktualisieren. **Im selben Commit wie die Link-Aktivierung.** Empfehlung: Formulierung von der Betreiberin freigeben lassen.
 9. ☐ **Bei Kredit-Partnern: § 17 PAngV / Pflichtangaben** — siehe Abschnitt 6. Ohne diese Prüfung wird kein Kredit-Partner aktiv.
 
@@ -105,4 +105,4 @@ Diese Kategorien werden **zuletzt** aktiviert. Zusätzlich zur Checkliste in Abs
 | SubID-Konvention, rel, Link-Logik | `lib/affiliate.ts` (Logik — bei Aktivierung i. d. R. unverändert) |
 | Deploy-Prozess | `DEPLOYMENT.md` |
 
-**Vor jedem Commit in der Platzhalter-Phase:** `git grep -n "http" -- data/partners.ts` darf keine echten URLs zeigen.
+**Vor jedem Commit:** `git grep -n "http" -- data/partners.ts` prüfen — es dürfen ausschließlich `https://`-Deeplinks **zugelassener** Programme im Feld `affiliateUrl` erscheinen (Stand 07.07.2026: nur der Awin-Link von Lexware Office), niemals `http://` und niemals URLs außerhalb von `affiliateUrl`.

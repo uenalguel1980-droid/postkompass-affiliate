@@ -12,6 +12,12 @@ import { Container } from "@/components/ui/Container";
  * zu einer vollständigen Plausible-Beschreibung ausgebaut werden
  * (siehe DEPLOYMENT.md → „Webanalyse aktivieren").
  *
+ * Ergänzung 07.07.2026 (Abschnitt 7): Erste echte Affiliate-Links aktiv
+ * (Awin, Pilot: Lexware Office) — Abschnitt 7 beschreibt jetzt den
+ * tatsächlichen Zustand. Bei JEDEM weiteren Netzwerk prüfen, ob Abschnitt 7
+ * es bereits abdeckt, sonst im selben Commit ergänzen (PARTNER.md, Schritt 8).
+ * Empfehlung: Formulierung durch die Betreiberin prüfen lassen.
+ *
  * noindex, follow bleibt BEWUSST bestehen: Rechtsseiten bleiben dauerhaft
  * aus dem Index (Entscheidung vom 06.07.2026, siehe app/impressum/page.tsx).
  *
@@ -178,15 +184,23 @@ const sections: PrivacySection[] = [
     blocks: [
       {
         type: "p",
-        text: "Diese Website ist als Informations- und Vergleichsangebot vorbereitet. Nach aktuellem Stand sind jedoch keine echten Affiliate-Links oder Partnertracking-Links aktiv.",
+        text: "Diese Website finanziert sich über Affiliate-Links (Werbelinks). Wir nehmen derzeit am Affiliate-Netzwerk Awin teil (AWIN AG, Otto-Ostrowski-Straße 1A, 10249 Berlin, Deutschland). Affiliate-Links sind auf dieser Website deutlich als „Anzeige“ gekennzeichnet.",
       },
       {
         type: "p",
-        text: "Sollten künftig Affiliate-Links oder Partnerprogramme eingebunden werden, kann es sein, dass beim Anklicken eines solchen Links Daten an den jeweiligen Anbieter oder das jeweilige Partnernetzwerk übermittelt werden. Dies kann insbesondere die Information umfassen, dass Sie über unsere Website auf ein Angebot weitergeleitet wurden.",
+        text: "Beim bloßen Besuch dieser Website werden durch die Affiliate-Einbindung keine personenbezogenen Daten an Awin oder Anbieter übermittelt: Es werden keine Skripte des Netzwerks auf dieser Website geladen und keine Affiliate-Cookies durch uns gesetzt.",
       },
       {
         type: "p",
-        text: "Vor dem Einsatz echter Affiliate-Links wird diese Datenschutzerklärung entsprechend ergänzt. Soweit für bestimmte Tracking- oder Partnertechnologien eine Einwilligung erforderlich ist, werden diese Technologien erst nach entsprechender Einwilligung eingesetzt.",
+        text: "Wenn Sie einen Affiliate-Link anklicken, werden Sie über einen Tracking-Link des Netzwerks (z. B. awin1.com) zum jeweiligen Anbieter weitergeleitet. Dabei verarbeitet das Netzwerk Daten wie Ihre IP-Adresse, den Zeitpunkt des Klicks und die Information, dass Sie über unsere Website auf das Angebot aufmerksam wurden. Das Netzwerk bzw. der Anbieter können nach dem Klick Cookies oder vergleichbare Technologien einsetzen, um einen späteren Vertragsabschluss unserer Website zuzuordnen (Provisionsabrechnung). Für diese Verarbeitungen nach der Weiterleitung ist das jeweilige Netzwerk bzw. der jeweilige Anbieter verantwortlich. Einzelheiten finden Sie in der Datenschutzerklärung von Awin: https://www.awin.com/de/datenschutzerklarung",
+      },
+      {
+        type: "p",
+        text: "Soweit die Verlinkung selbst eine Verarbeitung personenbezogener Daten durch uns darstellt, erfolgt sie auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der Finanzierung dieses kostenfrei nutzbaren Informationsangebots über Provisionen. Für Sie entstehen durch die Nutzung von Affiliate-Links keine Mehrkosten.",
+      },
+      {
+        type: "p",
+        text: "Sollten künftig weitere Partnernetzwerke oder Partnerprogramme eingebunden werden, wird diese Datenschutzerklärung entsprechend ergänzt. Soweit für bestimmte Tracking- oder Partnertechnologien auf dieser Website eine Einwilligung erforderlich wäre, werden solche Technologien erst nach entsprechender Einwilligung eingesetzt.",
       },
     ],
   },
@@ -376,7 +390,7 @@ export default function DatenschutzPage() {
       <h1 className="text-3xl font-bold tracking-tight text-brand-900 sm:text-4xl">
         Datenschutzerklärung
       </h1>
-      <p className="mt-3 text-sm text-slate-500">Stand: 06.07.2026</p>
+      <p className="mt-3 text-sm text-slate-500">Stand: 07.07.2026</p>
 
       <div className="mt-10 space-y-8">
         {sections.map((section) => (
