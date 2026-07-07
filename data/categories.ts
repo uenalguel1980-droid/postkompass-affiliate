@@ -302,6 +302,8 @@ export const categories: Category[] = [
       "gewerbe-geschaeftskonto",
       "gewerbe-toolanbieter",
       "buchhaltung-cloud",
+      "gewerbe-pdf-tool",
+      "gewerbe-it-hardware",
     ],
     offerTiles: [
       {

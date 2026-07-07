@@ -16,6 +16,10 @@ import type { Partner } from "@/types";
  * - ERSTE AKTIVIERUNG 07.07.2026: buchhaltung-cloud = Lexware Office
  *   (Awin 13787) — Pilot in unkritischer Kategorie, DSE Abschnitt 7
  *   im selben Zug angepasst.
+ * - NEBENPARTNER 07.07.2026 (beide Awin, beide nur gewerbe-tools):
+ *   gewerbe-pdf-tool = Wondershare PDFelement (Awin 20202),
+ *   gewerbe-it-hardware = it-versand.com (Awin 121708). Keine DSE-Änderung
+ *   nötig: gleiches Netzwerk (Awin), weiterhin keine Skripte/Cookies on-site.
  * ============================================================================
  *
  * Vorbereitete Netzwerke/Programme (Feld network):
@@ -246,6 +250,53 @@ export const partners: Partner[] = [
     status: "placeholder",
     network: "adcell",
     sensitive: false,
+  },
+  {
+    id: "gewerbe-pdf-tool",
+    name: "Wondershare PDFelement",
+    description:
+      "PDF-Software für die digitale Büroorganisation: PDF-Dokumente erstellen, bearbeiten, kommentieren und in andere Formate umwandeln.",
+    features: [
+      "PDFs erstellen, bearbeiten und kommentieren",
+      "Umwandlung von und zu Word, Excel und weiteren Formaten",
+      "Texterkennung (OCR) für gescannte Dokumente",
+      "Formulare ausfüllen und elektronisch signieren",
+    ],
+    // Awin-Deeplink (Programm 20202, Wondershare DE) — SubID per clickref
+    // nach PARTNER.md-Konvention. Bewusst gezielt als PDFelement/PDF-Tool
+    // eingebunden, nicht pauschal für alle Wondershare-Produkte.
+    affiliateUrl:
+      "https://www.awin1.com/cread.php?awinmid=20202&awinaffid=2974305&ued=https%3A%2F%2Fpdf.wondershare.de%2F&clickref=tarvyo24_gewerbe-tools_partnercard",
+    fallbackUrl: "#",
+    categorySlugs: ["gewerbe-tools"],
+    status: "active",
+    network: "awin",
+    sensitive: false,
+    activationNote:
+      "Awin-Programm 20202 (Wondershare DE), zugelassen, aktiviert am 07.07.2026 als Nebenpartner. Zielseite pdf.wondershare.de. Nur als PDFelement/PDF-Tool bewerben, nicht für das gesamte Wondershare-Portfolio. SubID über clickref-Parameter.",
+  },
+  {
+    id: "gewerbe-it-hardware",
+    name: "it-versand.com",
+    description:
+      "Online-Anbieter für IT- und Büro-Hardware: Computer, Monitore und Zubehör für die Ausstattung von Büro- und Homeoffice-Arbeitsplätzen.",
+    features: [
+      "Computer, Monitore und Computerzubehör",
+      "Technik für Büro- und Homeoffice-Arbeitsplätze",
+      "Lieferung nach Deutschland und Österreich",
+    ],
+    // Awin-Deeplink (Programm 121708, it-versand.com DE+AT) — SubID per
+    // clickref nach PARTNER.md-Konvention. Neutral als Hardware-Anbieter
+    // dargestellt, nicht als Preisvergleich.
+    affiliateUrl:
+      "https://www.awin1.com/cread.php?awinmid=121708&awinaffid=2974305&ued=https%3A%2F%2Fit-versand.com%2F&clickref=tarvyo24_gewerbe-tools_partnercard",
+    fallbackUrl: "#",
+    categorySlugs: ["gewerbe-tools"],
+    status: "active",
+    network: "awin",
+    sensitive: false,
+    activationNote:
+      "Awin-Programm 121708 (it-versand.com DE+AT), zugelassen, aktiviert am 07.07.2026 als Nebenpartner. Zielseite it-versand.com. Neutral als Anbieter für IT-/Büro-Hardware darstellen, nicht als Preisvergleich. SubID über clickref-Parameter.",
   },
 
   // --- Versicherungen (SENSIBEL) ----------------------------------------------

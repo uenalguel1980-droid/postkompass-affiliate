@@ -1,6 +1,6 @@
 # PARTNER.md — Affiliate-Aktivierungs-Runbook (Tarvyo24)
 
-**Stand:** 07.07.2026 · **Status:** Erste Aktivierung erfolgt — `buchhaltung-cloud` = **Lexware Office** (Awin-Programm 13787, `status: "active"`, Pilot in unkritischer Kategorie). Die übrigen 15 Partner bleiben Platzhalter (`affiliateUrl: null`, `status: "placeholder"`).
+**Stand:** 07.07.2026 · **Status:** 3 aktive Partner, alle über Awin — `buchhaltung-cloud` = **Lexware Office** (Programm 13787, Pilot), `gewerbe-pdf-tool` = **Wondershare PDFelement** (Programm 20202, Nebenpartner, nur gewerbe-tools), `gewerbe-it-hardware` = **it-versand.com** (Programm 121708, Nebenpartner, nur gewerbe-tools). Die übrigen 15 Partner bleiben Platzhalter (`affiliateUrl: null`, `status: "placeholder"`).
 
 Dieses Dokument ist der verbindliche Prozess, um später echte Partnerprogramme zu aktivieren — ohne rechtliche oder technische Fehler. Es ergänzt [PROJEKTPLAN.md](PROJEKTPLAN.md) (Architektur) und [DEPLOYMENT.md](DEPLOYMENT.md) (Deploy-Runbook).
 
@@ -105,4 +105,4 @@ Diese Kategorien werden **zuletzt** aktiviert. Zusätzlich zur Checkliste in Abs
 | SubID-Konvention, rel, Link-Logik | `lib/affiliate.ts` (Logik — bei Aktivierung i. d. R. unverändert) |
 | Deploy-Prozess | `DEPLOYMENT.md` |
 
-**Vor jedem Commit:** `git grep -n "http" -- data/partners.ts` prüfen — es dürfen ausschließlich `https://`-Deeplinks **zugelassener** Programme im Feld `affiliateUrl` erscheinen (Stand 07.07.2026: nur der Awin-Link von Lexware Office), niemals `http://` und niemals URLs außerhalb von `affiliateUrl`.
+**Vor jedem Commit:** `git grep -n "http" -- data/partners.ts` prüfen — es dürfen ausschließlich `https://`-Deeplinks **zugelassener** Programme im Feld `affiliateUrl` erscheinen (Stand 07.07.2026: die drei Awin-Links von Lexware Office, Wondershare PDFelement und it-versand.com), niemals `http://` und niemals URLs außerhalb von `affiliateUrl`.
