@@ -1,6 +1,6 @@
 # Awin-Bewerbungsstatus & Arbeitsliste (Tarvyo24)
 
-**Stand:** 08.07.2026 · **Basis:** [awin-partner-priorisierung.md](awin-partner-priorisierung.md) (Analyse vom 07.07.2026, 2.814 Programme) · Reines Arbeitsdokument — keine App-Dateien betroffen.
+**Stand:** 09.07.2026 · **Basis:** [awin-partner-priorisierung.md](awin-partner-priorisierung.md) (Analyse vom 07.07.2026, 2.814 Programme) · Reines Arbeitsdokument — keine App-Dateien betroffen.
 
 **Datenschutz-Grundsatz für dieses Dokument:** Alle unten gelisteten Programme laufen über **Awin**. Die Datenschutzerklärung (Abschnitt 7) deckt Awin bereits ab — solange nur weitere Awin-Deeplinks ergänzt werden und **kein** neues Netzwerk, Script, Cookie oder Tracking auf Tarvyo24 selbst hinzukommt, bleibt sie voraussichtlich **unverändert**. Die Spalte „DS" bestätigt das je Programm.
 
@@ -8,7 +8,7 @@
 
 ## 1. Bereits aktiv eingebaut (nicht erneut bewerben)
 
-Alle fünf Programme laufen über Awin, sind eingebaut **und live auf tarvyo24.de** (Deploy erfolgt). Datenschutzerklärung dabei unverändert geblieben — weiterhin ausschließlich Awin, keine neuen Netzwerke/Scripts/Cookies.
+Alle sechs Programme laufen über Awin und sind eingebaut. Die ersten fünf sind **live auf tarvyo24.de** (Deploy erfolgt); congstar ist committet und geht mit dem nächsten manuellen Deploy live. Datenschutzerklärung dabei unverändert geblieben — weiterhin ausschließlich Awin, keine neuen Netzwerke/Scripts/Cookies.
 
 | Programm | Awin-ID | Tarvyo24-Einbindung | Aktiviert |
 |---|---|---|---|
@@ -17,10 +17,11 @@ Alle fünf Programme laufen über Awin, sind eingebaut **und live auf tarvyo24.d
 | it-versand.com DE+AT | 121708 | kategorien/gewerbe-tools (Nebenpartner, IT-/Büro-Hardware) | 07.07.2026 |
 | Tarifcheck.de | 11202 | kategorien/strom-gas + internet-dsl + handyvertrag (nur unkritische Tarifkategorien, ein Deeplink) | 08.07.2026 |
 | CHECK24 Partnerprogramm | 9364 | NUR kategorien/strom-gas + internet-dsl (zwei Einträge mit kategoriespezifischen Deeplinks; Mobilfunk-, Versicherungs-, Kredit-, Konto-, Reise- und Mietwagen-Sparten bewusst nicht aktiviert) | 08.07.2026 |
+| congstar DE | 11938 | NUR kategorien/handyvertrag (DSL-/Zuhause-Angebote nicht aktiviert; Auflagen: kein Brand-Bidding/SEM, keine Gutschein-/Cashback-Versprechen, keine E-Mail-Werbung, kein eBay-Vertrieb) | 09.07.2026 |
 
 ## 2. + 3. Beworben / offen / ausstehend — Arbeitsliste je Programm
 
-29 Programme beworben, Zulassung ausstehend (ursprünglich 31; Tarifcheck.de und CHECK24 sind inzwischen zugelassen und eingebaut → Abschnitt 1). Prioritäten aus der Priorisierungsanalyse; drei manuelle Korrekturen der Skript-Einstufung sind gekennzeichnet (*).
+28 Programme beworben, Zulassung ausstehend (ursprünglich 31; Tarifcheck.de, CHECK24 und congstar sind inzwischen zugelassen und eingebaut → Abschnitt 1). Prioritäten aus der Priorisierungsanalyse; drei manuelle Korrekturen der Skript-Einstufung sind gekennzeichnet (*).
 
 ### Vergleichsportale (kategorienübergreifend — nur unkritische Bereiche bewerben)
 
@@ -50,7 +51,6 @@ Alle fünf Programme laufen über Awin, sind eingebaut **und live auf tarvyo24.d
 
 | Programm (ID) | Prio | Warum interessant | Bei Zulassung beachten | Tarvyo24-Seite | DS |
 |---|---|---|---|---|---|
-| congstar DE (11938) | A | Telekom-Netz-Discounter, bekannte Marke | Aktionszeiträume der Provisionen beachten | kategorien/handyvertrag | ✅ unverändert |
 | fraenk DE (20041) | A | 91 % Bestätigung, „green", App-Tarif im Telekom-Netz | Provision pro Abschluss prüfen (App-only-Modell im Text korrekt beschreiben) | kategorien/handyvertrag | ✅ unverändert |
 | WEtell DE (44455) | A | Nachhaltiger Mobilfunk, 62 % Bestätigung, passt zur sachlichen Redaktionslinie | Nachhaltigkeitsaussagen nur so weit übernehmen, wie belegt | kategorien/handyvertrag | ✅ unverändert |
 | PremiumSIM DE (15013) | B | EPC 1,90, bis 30 €/Lead, „green" | auffällig niedrige Bestätigungsquote (3 %) — Konditionen bei Zulassung genau prüfen | kategorien/handyvertrag | ✅ unverändert |
@@ -88,7 +88,7 @@ Alle fünf Programme laufen über Awin, sind eingebaut **und live auf tarvyo24.d
 
 ## 4. Nächste Aktion (Prozess)
 
-**Nächste mögliche Partner (Stand 08.07.2026):** congstar DE (11938, kategorien/handyvertrag) und NetCologne DE (13664, kategorien/internet-dsl) — bei Zulassung nach dem Prozess unten einbauen; beide Awin, Datenschutz bliebe unverändert.
+**Nächster möglicher Partner (Stand 09.07.2026):** NetCologne DE (13664, kategorien/internet-dsl) — bei Zulassung nach dem Prozess unten einbauen; Awin, Datenschutz bliebe unverändert. congstar DE (11938) ist inzwischen eingebaut → Abschnitt 1.
 
 1. **Nicht erneut bewerben** — alle 31 Programme sind eingereicht; Doppelbewerbungen schaden dem Publisher-Profil.
 2. **Regelmäßig den Awin-Tab „Zugelassen" prüfen** (z. B. 2–3× pro Woche).
