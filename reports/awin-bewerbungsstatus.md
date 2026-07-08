@@ -8,7 +8,7 @@
 
 ## 1. Bereits aktiv eingebaut (nicht erneut bewerben)
 
-Alle sechs Programme laufen über Awin und sind eingebaut. Die ersten fünf sind **live auf tarvyo24.de** (Deploy erfolgt); congstar ist committet und geht mit dem nächsten manuellen Deploy live. Datenschutzerklärung dabei unverändert geblieben — weiterhin ausschließlich Awin, keine neuen Netzwerke/Scripts/Cookies.
+Alle sieben Programme laufen über Awin und sind eingebaut. Die ersten fünf sind **live auf tarvyo24.de** (Deploy erfolgt); congstar und NetCologne sind committet und gehen mit dem nächsten manuellen Deploy live. Datenschutzerklärung dabei unverändert geblieben — weiterhin ausschließlich Awin, keine neuen Netzwerke/Scripts/Cookies.
 
 | Programm | Awin-ID | Tarvyo24-Einbindung | Aktiviert |
 |---|---|---|---|
@@ -18,10 +18,11 @@ Alle sechs Programme laufen über Awin und sind eingebaut. Die ersten fünf sind
 | Tarifcheck.de | 11202 | kategorien/strom-gas + internet-dsl + handyvertrag (nur unkritische Tarifkategorien, ein Deeplink) | 08.07.2026 |
 | CHECK24 Partnerprogramm | 9364 | NUR kategorien/strom-gas + internet-dsl (zwei Einträge mit kategoriespezifischen Deeplinks; Mobilfunk-, Versicherungs-, Kredit-, Konto-, Reise- und Mietwagen-Sparten bewusst nicht aktiviert) | 08.07.2026 |
 | congstar DE | 11938 | NUR kategorien/handyvertrag (DSL-/Zuhause-Angebote nicht aktiviert; Auflagen: kein Brand-Bidding/SEM, keine Gutschein-/Cashback-Versprechen, keine E-Mail-Werbung, kein eBay-Vertrieb) | 09.07.2026 |
+| NetCologne DE | 13664 | NUR kategorien/internet-dsl (regionaler Anbieter Köln/Bonn/Aachen und Umgebung — nie als bundesweit darstellen; Auflagen: kein Paid Search/Social Advertising ohne Freigabe, „NetCologne"/„NetAachen" bei Paid Ads ausschließen, keine Bonus-/Klickzwang-Modelle, keine Garantieaussagen) | 09.07.2026 |
 
 ## 2. + 3. Beworben / offen / ausstehend — Arbeitsliste je Programm
 
-28 Programme beworben, Zulassung ausstehend (ursprünglich 31; Tarifcheck.de, CHECK24 und congstar sind inzwischen zugelassen und eingebaut → Abschnitt 1). Prioritäten aus der Priorisierungsanalyse; drei manuelle Korrekturen der Skript-Einstufung sind gekennzeichnet (*).
+27 Programme beworben, Zulassung ausstehend (ursprünglich 31; Tarifcheck.de, CHECK24, congstar und NetCologne sind inzwischen zugelassen und eingebaut → Abschnitt 1). Prioritäten aus der Priorisierungsanalyse; zwei der drei manuellen Korrekturen der Skript-Einstufung sind noch gelistet (*).
 
 ### Vergleichsportale (kategorienübergreifend — nur unkritische Bereiche bewerben)
 
@@ -45,7 +46,6 @@ Alle sechs Programme laufen über Awin und sind eingebaut. Die ersten fünf sind
 | Telekom Affiliate DE (11430) | A | Bis 280 €/Lead, 81 % Bestätigung, „green"; deckt Festnetz+Mobilfunk | Werbemittel-/Markenvorgaben der Telekom strikt einhalten; kein Brand-Bidding (gilt ohnehin) | kategorien/internet-dsl + handyvertrag | ✅ unverändert |
 | Vodafone DE (11331) | A | Große Marke, Kabel/DSL + Mobilfunk, „green" | Provisionsgruppen (Kabel vs. DSL vs. Mobilfunk) unterscheiden | kategorien/internet-dsl + handyvertrag | ✅ unverändert |
 | 1&1 Telecommunication (12554) | A | Bis 80 €/Lead, DSL+Mobilfunk aus einer Hand | niedrige Bestätigungsquote (40 %) einkalkulieren; Storno-Bedingungen lesen | kategorien/internet-dsl + handyvertrag | ✅ unverändert |
-| NetCologne DE (13664) | B* | Bis 95 €/Lead, „green"; starker Regionalanbieter Köln/Bonn | *manuell von D auf B korrigiert (Skript-Keyword-Lücke — regionaler ISP ist thematisch passend). Regionalität sachlich benennen | kategorien/internet-dsl | ✅ unverändert |
 
 ### Mobilfunk / SIM / Handyvertrag
 
@@ -88,7 +88,7 @@ Alle sechs Programme laufen über Awin und sind eingebaut. Die ersten fünf sind
 
 ## 4. Nächste Aktion (Prozess)
 
-**Nächster möglicher Partner (Stand 09.07.2026):** NetCologne DE (13664, kategorien/internet-dsl) — bei Zulassung nach dem Prozess unten einbauen; Awin, Datenschutz bliebe unverändert. congstar DE (11938) ist inzwischen eingebaut → Abschnitt 1.
+**Stand 09.07.2026:** Die zuletzt vorgemerkten Kandidaten congstar DE (11938) und NetCologne DE (13664) sind beide eingebaut → Abschnitt 1. Nächste Kandidaten ergeben sich aus den 27 offenen Bewerbungen oben, sobald Awin weitere Zulassungen erteilt — Reihenfolge nach Prio-Spalte, Einbau strikt nach dem Prozess unten.
 
 1. **Nicht erneut bewerben** — alle 31 Programme sind eingereicht; Doppelbewerbungen schaden dem Publisher-Profil.
 2. **Regelmäßig den Awin-Tab „Zugelassen" prüfen** (z. B. 2–3× pro Woche).
