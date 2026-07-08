@@ -35,6 +35,11 @@ import type { Partner } from "@/types";
  *   NUR handyvertrag. DSL-/Zuhause-Angebote trotz Erwähnung im Programm-
  *   profil bewusst NICHT aktiviert (bräuchte separate Prüfung + eigenen
  *   Deeplink). Keine DSE-Änderung nötig: gleiches Netzwerk (Awin).
+ * - REGIONALPARTNER 09.07.2026: dsl-netcologne = NetCologne DE (Awin 13664),
+ *   NUR internet-dsl. Regionaler Anbieter Köln/Bonn/Aachen und Umgebung —
+ *   Regionalität immer sachlich benennen, NIE als bundesweit darstellen.
+ *   Mobilfunk nicht aktiv bewerben. Keine DSE-Änderung nötig:
+ *   gleiches Netzwerk (Awin).
  * ============================================================================
  *
  * Vorbereitete Netzwerke/Programme (Feld network):
@@ -165,6 +170,31 @@ export const partners: Partner[] = [
     sensitive: false,
     activationNote:
       "Awin-Programm 9364 (CHECK24 Partnerprogramm), zugelassen, aktiviert am 08.07.2026. Zielseite check24.de/dsl/. NUR internet-dsl (und Schwester-Eintrag energie-check24 auf strom-gas) — Mobilfunk, Versicherung, Kredit, Konto, Reise und Mietwagen werden bewusst NICHT aktiviert, da die geprüften Provisionsinformationen nur Strom/Gas und DSL betreffen. Neutral als Vergleichsportal beschreiben, keine Garantie-/Superlativ-Aussagen. SubID über clickref-Parameter, kategoriebezogen.",
+  },
+  {
+    id: "dsl-netcologne",
+    name: "NetCologne",
+    description:
+      "Regionaler Telekommunikationsanbieter für den Raum Köln, Bonn und Aachen mit Umgebung: Internetanschlüsse, Telefon und TV (NetTV) — Verfügbarkeit hängt von der Adresse ab.",
+    features: [
+      "Internet-, Telefon- und TV-Angebote (NetTV)",
+      "Verfügbarkeitsprüfung an der eigenen Adresse",
+      "Regionale Versorgung: Köln, Bonn, Aachen und Umgebung",
+      "Kostenüberblick über Tarife und Laufzeiten",
+    ],
+    // Awin-Deeplink (Programm 13664, NetCologne DE) — SubID per clickref
+    // nach PARTNER.md-Konvention. Zielseite netcologne.de/privatkunden/
+    // internet/. Regionaler Anbieter — nie als bundesweit darstellen
+    // (siehe Kopfkommentar und activationNote).
+    affiliateUrl:
+      "https://www.awin1.com/cread.php?awinmid=13664&awinaffid=2974305&ued=https%3A%2F%2Fwww.netcologne.de%2Fprivatkunden%2Finternet%2F&clickref=tarvyo24_internet-dsl_netcologne_partnercard",
+    fallbackUrl: "#",
+    categorySlugs: ["internet-dsl"],
+    status: "active",
+    network: "awin",
+    sensitive: false,
+    activationNote:
+      "Awin-Programm 13664 (NetCologne DE), zugelassen, aktiviert am 09.07.2026. Zielseite netcologne.de/privatkunden/internet/. NUR internet-dsl — Mobilfunk wird nicht aktiv beworben. Regionaler Anbieter (Köln/Bonn/Aachen und Umgebung): Regionalität sachlich benennen, NIE als bundesweit verfügbar darstellen, keine Garantieaussagen. Programmauflagen beachten: kein Suchmaschinenmarketing/Paid Search und kein Social-Media-Advertising ohne Freigabe, Begriffe „NetCologne“/„NetAachen“ bei Paid Ads ausschließen, keine Bonus-/Klickzwang-Modelle. SubID über clickref-Parameter, kategoriebezogen.",
   },
 
   // --- Strom & Gas ----------------------------------------------------------

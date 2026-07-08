@@ -93,6 +93,7 @@ export const categories: Category[] = [
     sensitive: false,
     partnerIds: [
       "dsl-check24",
+      "dsl-netcologne",
       "dsl-vergleichsportal",
       "dsl-tarifrechner",
       "tarif-tarifcheck",
