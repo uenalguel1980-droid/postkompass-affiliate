@@ -8,23 +8,25 @@
 
 ## 1. Bereits aktiv eingebaut (nicht erneut bewerben)
 
+Alle fünf Programme laufen über Awin, sind eingebaut **und live auf tarvyo24.de** (Deploy erfolgt). Datenschutzerklärung dabei unverändert geblieben — weiterhin ausschließlich Awin, keine neuen Netzwerke/Scripts/Cookies.
+
 | Programm | Awin-ID | Tarvyo24-Einbindung | Aktiviert |
 |---|---|---|---|
 | Lexware Office DE | 13787 | kategorien/buchhaltungssoftware + gewerbe-tools + Ratgeber (Pilot) | 07.07.2026 |
 | Wondershare DE (PDFelement) | 20202 | kategorien/gewerbe-tools (Nebenpartner, nur als PDF-Tool) | 07.07.2026 |
 | it-versand.com DE+AT | 121708 | kategorien/gewerbe-tools (Nebenpartner, IT-/Büro-Hardware) | 07.07.2026 |
+| Tarifcheck.de | 11202 | kategorien/strom-gas + internet-dsl + handyvertrag (nur unkritische Tarifkategorien, ein Deeplink) | 08.07.2026 |
+| CHECK24 Partnerprogramm | 9364 | NUR kategorien/strom-gas + internet-dsl (zwei Einträge mit kategoriespezifischen Deeplinks; Mobilfunk-, Versicherungs-, Kredit-, Konto-, Reise- und Mietwagen-Sparten bewusst nicht aktiviert) | 08.07.2026 |
 
 ## 2. + 3. Beworben / offen / ausstehend — Arbeitsliste je Programm
 
-31 Programme beworben, Zulassung ausstehend. Prioritäten aus der Priorisierungsanalyse; drei manuelle Korrekturen der Skript-Einstufung sind gekennzeichnet (*).
+29 Programme beworben, Zulassung ausstehend (ursprünglich 31; Tarifcheck.de und CHECK24 sind inzwischen zugelassen und eingebaut → Abschnitt 1). Prioritäten aus der Priorisierungsanalyse; drei manuelle Korrekturen der Skript-Einstufung sind gekennzeichnet (*).
 
 ### Vergleichsportale (kategorienübergreifend — nur unkritische Bereiche bewerben)
 
 | Programm (ID) | Prio | Warum interessant | Bei Zulassung beachten | Tarvyo24-Seite | DS |
 |---|---|---|---|---|---|
-| Tarifcheck.de (11202) | A | Top-EV der Analyse: EPC 4,00, bis 60,50 €/Lead, Zahlung „green" | Provisionsgruppen je Sparte prüfen; NUR unkritische Bereiche (Energie/Internet/Mobilfunk) verlinken, Finanz-/Versicherungssparten erst nach separater Prüfung | Energie-, Internet-, Mobilfunk-Kategorien | ✅ unverändert |
 | Verivox DE (14797) | A | 78 % Bestätigung, bis 55 €/Lead, „green"; starke Marke | wie Tarifcheck: Sparten-Deeplinks bewusst wählen, keine Kredit-/Versicherungssparten ohne Prüfung | Energie-, Internet-, Mobilfunk-Kategorien | ✅ unverändert |
-| CHECK24 Partnerprogramm (9364) | A | Bekannteste Vergleichsmarke, bis 55 €/Lead + 5,5 % | strengste Programmbedingungen im Feld: Freigabe-Auflagen, Werbemittel-Vorgaben und Sparten-Erlaubnis genau lesen; nur unkritische Sparten | Energie-, Internet-, Mobilfunk-Kategorien | ✅ unverändert |
 
 ### Energie / Strom / Gas
 
@@ -85,6 +87,8 @@
 | 2GO Software DE (120778) | B | 95 % Bestätigung, Software-Lizenzen | wie Lizensio | kategorien/gewerbe-tools | ✅ unverändert |
 
 ## 4. Nächste Aktion (Prozess)
+
+**Nächste mögliche Partner (Stand 08.07.2026):** congstar DE (11938, kategorien/handyvertrag) und NetCologne DE (13664, kategorien/internet-dsl) — bei Zulassung nach dem Prozess unten einbauen; beide Awin, Datenschutz bliebe unverändert.
 
 1. **Nicht erneut bewerben** — alle 31 Programme sind eingereicht; Doppelbewerbungen schaden dem Publisher-Profil.
 2. **Regelmäßig den Awin-Tab „Zugelassen" prüfen** (z. B. 2–3× pro Woche).
