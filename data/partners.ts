@@ -31,6 +31,10 @@ import type { Partner } from "@/types";
  *   handyvertrag, versicherungen, kredit, konto-kreditkarte, reise oder
  *   mietwagen (Provisionsprüfung liegt nur für Strom/Gas/DSL vor).
  *   Keine DSE-Änderung nötig: gleiches Netzwerk (Awin).
+ * - MOBILFUNKPARTNER 09.07.2026: handy-congstar = congstar DE (Awin 11938),
+ *   NUR handyvertrag. DSL-/Zuhause-Angebote trotz Erwähnung im Programm-
+ *   profil bewusst NICHT aktiviert (bräuchte separate Prüfung + eigenen
+ *   Deeplink). Keine DSE-Änderung nötig: gleiches Netzwerk (Awin).
  * ============================================================================
  *
  * Vorbereitete Netzwerke/Programme (Feld network):
@@ -75,6 +79,31 @@ export const partners: Partner[] = [
     status: "placeholder",
     network: "telekom",
     sensitive: false,
+  },
+  {
+    id: "handy-congstar",
+    name: "congstar",
+    description:
+      "Mobilfunkanbieter im Netz der Telekom: Handytarife als Prepaid und mit Vertrag, Allnet-Flats mit unterschiedlichem Datenvolumen und monatlich kündbaren Optionen.",
+    features: [
+      "Prepaid- und Vertragstarife (Postpaid)",
+      "Allnet-Flats mit wählbarem Datenvolumen",
+      "Monatlich kündbare Tarifoptionen verfügbar",
+      "Kostenüberblick durch klare Tarifstruktur",
+    ],
+    // Awin-Deeplink (Programm 11938, congstar DE) — SubID per clickref
+    // nach PARTNER.md-Konvention. Zielseite congstar.de/handytarife/ —
+    // bewusst NUR Mobilfunk, keine DSL-/Zuhause-Angebote (siehe
+    // Kopfkommentar und activationNote).
+    affiliateUrl:
+      "https://www.awin1.com/cread.php?awinmid=11938&awinaffid=2974305&ued=https%3A%2F%2Fwww.congstar.de%2Fhandytarife%2F&clickref=tarvyo24_handyvertrag_congstar_partnercard",
+    fallbackUrl: "#",
+    categorySlugs: ["handyvertrag"],
+    status: "active",
+    network: "awin",
+    sensitive: false,
+    activationNote:
+      "Awin-Programm 11938 (congstar DE), zugelassen, aktiviert am 09.07.2026. Zielseite congstar.de/handytarife/. NUR handyvertrag — DSL-/Zuhause-Angebote werden trotz Erwähnung im Programmprofil nicht aktiviert (separate Prüfung + eigener Deeplink nötig). Programmauflagen beachten: kein Brand-Bidding/SEM auf congstar-/Telekom-Marken, keine Gutschein-/Cashback-Versprechen, keine E-Mail-/Newsletter-Werbung, kein eBay-Vertrieb. Neutral als Mobilfunkanbieter beschreiben, keine Garantie-/Superlativ-Aussagen (kein „bestes Netz“). SubID über clickref-Parameter, kategoriebezogen.",
   },
 
   // --- Internet & DSL -------------------------------------------------------

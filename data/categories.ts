@@ -34,7 +34,12 @@ export const categories: Category[] = [
       "Subventionierte Handys, deren Aufpreis über die Laufzeit teurer ist als Gerätekauf plus günstigerer Tarif.",
     ],
     sensitive: false,
-    partnerIds: ["handy-vergleichsportal", "handy-netzbetreiber", "tarif-tarifcheck"],
+    partnerIds: [
+      "handy-congstar",
+      "handy-vergleichsportal",
+      "handy-netzbetreiber",
+      "tarif-tarifcheck",
+    ],
     offerTiles: [
       {
         id: "handy-sim-only",
