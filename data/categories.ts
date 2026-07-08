@@ -34,7 +34,7 @@ export const categories: Category[] = [
       "Subventionierte Handys, deren Aufpreis über die Laufzeit teurer ist als Gerätekauf plus günstigerer Tarif.",
     ],
     sensitive: false,
-    partnerIds: ["handy-vergleichsportal", "handy-netzbetreiber"],
+    partnerIds: ["handy-vergleichsportal", "handy-netzbetreiber", "tarif-tarifcheck"],
     offerTiles: [
       {
         id: "handy-sim-only",
@@ -86,7 +86,7 @@ export const categories: Category[] = [
       "„Bis zu“-Geschwindigkeiten, die an der eigenen Adresse technisch nicht erreicht werden.",
     ],
     sensitive: false,
-    partnerIds: ["dsl-vergleichsportal", "dsl-tarifrechner"],
+    partnerIds: ["dsl-vergleichsportal", "dsl-tarifrechner", "tarif-tarifcheck"],
     offerTiles: [
       {
         id: "internet-dsl-tarife",
@@ -138,7 +138,7 @@ export const categories: Category[] = [
       "Automatische Verlängerung mit deutlich höherem Folgepreis, wenn die Kündigungsfrist verpasst wird.",
     ],
     sensitive: false,
-    partnerIds: ["energie-vergleichsportal", "energie-tarifrechner"],
+    partnerIds: ["energie-vergleichsportal", "energie-tarifrechner", "tarif-tarifcheck"],
     offerTiles: [
       {
         id: "energie-strom",

@@ -20,6 +20,10 @@ import type { Partner } from "@/types";
  *   gewerbe-pdf-tool = Wondershare PDFelement (Awin 20202),
  *   gewerbe-it-hardware = it-versand.com (Awin 121708). Keine DSE-Änderung
  *   nötig: gleiches Netzwerk (Awin), weiterhin keine Skripte/Cookies on-site.
+ * - TARIFPARTNER 08.07.2026: tarif-tarifcheck = Tarifcheck.de (Awin 11202),
+ *   nur unkritische Tarifkategorien (strom-gas, internet-dsl, handyvertrag).
+ *   NICHT auf versicherungen/kredit/konto-kreditkarte ohne separate Prüfung.
+ *   Keine DSE-Änderung nötig: gleiches Netzwerk (Awin).
  * ============================================================================
  *
  * Vorbereitete Netzwerke/Programme (Feld network):
@@ -136,6 +140,32 @@ export const partners: Partner[] = [
     status: "placeholder",
     network: "tarifcheck",
     sensitive: false,
+  },
+
+  // --- Tarifvergleich (kategorieübergreifend) ---------------------------------
+  {
+    id: "tarif-tarifcheck",
+    name: "Tarifcheck.de",
+    description:
+      "Vergleichsportal für Verbraucher: bietet Tarifvergleiche in Alltagsbereichen wie Strom, Gas, Internet und Mobilfunk — als Orientierung für Kostenüberblick und Anbieterwechsel.",
+    features: [
+      "Tarifvergleiche in mehreren Alltagsbereichen (u. a. Strom, Gas, Internet, Mobilfunk)",
+      "Überblick über Anbieter und Konditionen",
+      "Unterstützung beim Anbieterwechsel",
+    ],
+    // Awin-Deeplink (Programm 11202, Tarifcheck.de) — SubID per clickref.
+    // Clickref hier bewusst partnerbezogen (tarvyo24_tarifcheck_partnercard)
+    // statt kategoriebezogen, da EIN Deeplink auf mehreren Kategorieseiten
+    // erscheint (Betreiberin-Vorgabe vom 08.07.2026).
+    affiliateUrl:
+      "https://www.awin1.com/cread.php?awinmid=11202&awinaffid=2974305&ued=https%3A%2F%2Fwww.tarifcheck.de%2F&clickref=tarvyo24_tarifcheck_partnercard",
+    fallbackUrl: "#",
+    categorySlugs: ["strom-gas", "internet-dsl", "handyvertrag"],
+    status: "active",
+    network: "awin",
+    sensitive: false,
+    activationNote:
+      "Awin-Programm 11202 (Tarifcheck.de), zugelassen, aktiviert am 08.07.2026. Nur auf unkritischen Tarifkategorien (strom-gas, internet-dsl, handyvertrag) eingebunden — NICHT auf versicherungen, kredit oder konto-kreditkarte, solange dafür keine separate Prüfung erfolgt ist (Portal bietet auch Versicherungs-/Finanzvergleiche an, diese werden von uns bewusst nicht beworben). Neutral als Vergleichsportal beschreiben, keine Garantie-/Superlativ-Aussagen. SubID über clickref-Parameter, partnerbezogen statt kategoriebezogen (ein Deeplink für mehrere Kategorien).",
   },
 
   // --- Konto & Kreditkarte ---------------------------------------------------
