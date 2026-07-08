@@ -86,7 +86,12 @@ export const categories: Category[] = [
       "„Bis zu“-Geschwindigkeiten, die an der eigenen Adresse technisch nicht erreicht werden.",
     ],
     sensitive: false,
-    partnerIds: ["dsl-vergleichsportal", "dsl-tarifrechner", "tarif-tarifcheck"],
+    partnerIds: [
+      "dsl-check24",
+      "dsl-vergleichsportal",
+      "dsl-tarifrechner",
+      "tarif-tarifcheck",
+    ],
     offerTiles: [
       {
         id: "internet-dsl-tarife",
@@ -138,7 +143,12 @@ export const categories: Category[] = [
       "Automatische Verlängerung mit deutlich höherem Folgepreis, wenn die Kündigungsfrist verpasst wird.",
     ],
     sensitive: false,
-    partnerIds: ["energie-vergleichsportal", "energie-tarifrechner", "tarif-tarifcheck"],
+    partnerIds: [
+      "energie-check24",
+      "energie-vergleichsportal",
+      "energie-tarifrechner",
+      "tarif-tarifcheck",
+    ],
     offerTiles: [
       {
         id: "energie-strom",

@@ -24,6 +24,13 @@ import type { Partner } from "@/types";
  *   nur unkritische Tarifkategorien (strom-gas, internet-dsl, handyvertrag).
  *   NICHT auf versicherungen/kredit/konto-kreditkarte ohne separate Prüfung.
  *   Keine DSE-Änderung nötig: gleiches Netzwerk (Awin).
+ * - CHECK24 08.07.2026: energie-check24 + dsl-check24 = CHECK24
+ *   Partnerprogramm (Awin 9364). ZWEI Einträge, weil das Datenmodell einen
+ *   affiliateUrl pro Partner vorsieht und CHECK24 kategoriespezifische
+ *   Deeplinks/Clickrefs braucht. NUR strom-gas und internet-dsl — NICHT
+ *   handyvertrag, versicherungen, kredit, konto-kreditkarte, reise oder
+ *   mietwagen (Provisionsprüfung liegt nur für Strom/Gas/DSL vor).
+ *   Keine DSE-Änderung nötig: gleiches Netzwerk (Awin).
  * ============================================================================
  *
  * Vorbereitete Netzwerke/Programme (Feld network):
@@ -105,6 +112,31 @@ export const partners: Partner[] = [
     network: "tarifcheck",
     sensitive: false,
   },
+  {
+    id: "dsl-check24",
+    name: "CHECK24 Internet & DSL",
+    description:
+      "Vergleichsportal für Internet- und DSL-Tarife: Verfügbarkeitsprüfung an der eigenen Adresse, Überblick über Anbieter, Tarife und monatliche Kosten.",
+    features: [
+      "DSL- und Internet-Tarife im Vergleich",
+      "Verfügbarkeitsprüfung per Adresse",
+      "Überblick über Anbieter und Konditionen",
+      "Kostenüberblick über die Vertragslaufzeit",
+    ],
+    // Awin-Deeplink (Programm 9364, CHECK24 Partnerprogramm) — SubID per
+    // clickref nach PARTNER.md-Konvention: tarvyo24_[kategorie]_[platzierung].
+    // Eigener Eintrag je Kategorie, da CHECK24 kategoriespezifische
+    // Deeplinks (ued) und Clickrefs nutzt — siehe Kopfkommentar.
+    affiliateUrl:
+      "https://www.awin1.com/cread.php?awinmid=9364&awinaffid=2974305&ued=https%3A%2F%2Fwww.check24.de%2Fdsl%2F&clickref=tarvyo24_internet-dsl_check24_partnercard",
+    fallbackUrl: "#",
+    categorySlugs: ["internet-dsl"],
+    status: "active",
+    network: "awin",
+    sensitive: false,
+    activationNote:
+      "Awin-Programm 9364 (CHECK24 Partnerprogramm), zugelassen, aktiviert am 08.07.2026. Zielseite check24.de/dsl/. NUR internet-dsl (und Schwester-Eintrag energie-check24 auf strom-gas) — Mobilfunk, Versicherung, Kredit, Konto, Reise und Mietwagen werden bewusst NICHT aktiviert, da die geprüften Provisionsinformationen nur Strom/Gas und DSL betreffen. Neutral als Vergleichsportal beschreiben, keine Garantie-/Superlativ-Aussagen. SubID über clickref-Parameter, kategoriebezogen.",
+  },
 
   // --- Strom & Gas ----------------------------------------------------------
   {
@@ -140,6 +172,31 @@ export const partners: Partner[] = [
     status: "placeholder",
     network: "tarifcheck",
     sensitive: false,
+  },
+  {
+    id: "energie-check24",
+    name: "CHECK24 Strom & Gas",
+    description:
+      "Vergleichsportal für Strom- und Gastarife: Überblick über Anbieter und Tarife anhand der eigenen Verbrauchswerte, Unterstützung beim Anbieterwechsel.",
+    features: [
+      "Strom- und Gastarife im Vergleich",
+      "Kostenüberblick anhand des Jahresverbrauchs",
+      "Überblick über Anbieter und Konditionen",
+      "Unterstützung beim Anbieterwechsel",
+    ],
+    // Awin-Deeplink (Programm 9364, CHECK24 Partnerprogramm) — SubID per
+    // clickref nach PARTNER.md-Konvention: tarvyo24_[kategorie]_[platzierung].
+    // Eigener Eintrag je Kategorie, da CHECK24 kategoriespezifische
+    // Deeplinks (ued) und Clickrefs nutzt — siehe Kopfkommentar.
+    affiliateUrl:
+      "https://www.awin1.com/cread.php?awinmid=9364&awinaffid=2974305&ued=https%3A%2F%2Fwww.check24.de%2Fstrom-gas%2F&clickref=tarvyo24_strom-gas_check24_partnercard",
+    fallbackUrl: "#",
+    categorySlugs: ["strom-gas"],
+    status: "active",
+    network: "awin",
+    sensitive: false,
+    activationNote:
+      "Awin-Programm 9364 (CHECK24 Partnerprogramm), zugelassen, aktiviert am 08.07.2026. Zielseite check24.de/strom-gas/. NUR strom-gas (und Schwester-Eintrag dsl-check24 auf internet-dsl) — Mobilfunk, Versicherung, Kredit, Konto, Reise und Mietwagen werden bewusst NICHT aktiviert, da die geprüften Provisionsinformationen nur Strom/Gas und DSL betreffen. Neutral als Vergleichsportal beschreiben, keine Garantie-/Superlativ-Aussagen. SubID über clickref-Parameter, kategoriebezogen.",
   },
 
   // --- Tarifvergleich (kategorieübergreifend) ---------------------------------
