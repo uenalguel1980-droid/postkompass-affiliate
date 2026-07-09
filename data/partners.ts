@@ -40,6 +40,12 @@ import type { Partner } from "@/types";
  *   Regionalität immer sachlich benennen, NIE als bundesweit darstellen.
  *   Mobilfunk nicht aktiv bewerben. Keine DSE-Änderung nötig:
  *   gleiches Netzwerk (Awin).
+ * - APP-TARIF-PARTNER 09.07.2026: handy-fraenk = fraenk DE (Awin 20041),
+ *   NUR handyvertrag. App-basierter SIM-only-/eSIM-Tarif — Abschluss und
+ *   Aktivierung ausschließlich über die fraenk App. Awin-Hinweis: aktuell
+ *   ist NUR mobiler Traffic mit direktem Einstieg in App Store/Play Store
+ *   trackbar — nicht als klassischen Desktop-Vergleich darstellen.
+ *   Keine DSE-Änderung nötig: gleiches Netzwerk (Awin).
  * ============================================================================
  *
  * Vorbereitete Netzwerke/Programme (Feld network):
@@ -109,6 +115,32 @@ export const partners: Partner[] = [
     sensitive: false,
     activationNote:
       "Awin-Programm 11938 (congstar DE), zugelassen, aktiviert am 09.07.2026. Zielseite congstar.de/handytarife/. NUR handyvertrag — DSL-/Zuhause-Angebote werden trotz Erwähnung im Programmprofil nicht aktiviert (separate Prüfung + eigener Deeplink nötig). Programmauflagen beachten: kein Brand-Bidding/SEM auf congstar-/Telekom-Marken, keine Gutschein-/Cashback-Versprechen, keine E-Mail-/Newsletter-Werbung, kein eBay-Vertrieb. Neutral als Mobilfunkanbieter beschreiben, keine Garantie-/Superlativ-Aussagen (kein „bestes Netz“). SubID über clickref-Parameter, kategoriebezogen.",
+  },
+  {
+    id: "handy-fraenk",
+    name: "fraenk",
+    description:
+      "App-basierter Mobilfunktarif: Abschluss, Aktivierung und Verwaltung laufen vollständig über die fraenk App — mit einfacher Tarifstruktur, monatlicher Kündbarkeit und eSIM-Option. Der Einstieg erfolgt über den App Store bzw. Google Play und richtet sich daher vor allem an Nutzerinnen und Nutzer am Smartphone.",
+    features: [
+      "SIM-only Tarif, monatlich kündbar",
+      "Abschluss und Aktivierung direkt in der fraenk App",
+      "eSIM oder klassische SIM-Karte wählbar",
+      "Einfache, übersichtliche Tarifstruktur",
+    ],
+    // Offizielles Awin-Werbemittel (Programm 20041, fraenk DE; awclick,
+    // linkid 2879940) — Ziel ist der App-Download (App Store/Play Store),
+    // SubID per clickref nach PARTNER.md-Konvention. Bewusst KEIN
+    // Desktop-Vergleichskontext: laut Awin ist aktuell nur mobiler Traffic
+    // mit direktem Store-Einstieg trackbar (siehe activationNote).
+    affiliateUrl:
+      "https://www.awin1.com/awclick.php?gid=391743&mid=20041&awinaffid=2974305&linkid=2879940&clickref=tarvyo24_handyvertrag_fraenk_app_partnercard",
+    fallbackUrl: "#",
+    categorySlugs: ["handyvertrag"],
+    status: "active",
+    network: "awin",
+    sensitive: false,
+    activationNote:
+      "Awin-Programm 20041 (fraenk DE), zugelassen, aktiviert am 09.07.2026. Offizielles Werbemittel awclick (gid 391743, linkid 2879940), Ziel: fraenk-App-Download im App Store/Play Store. NUR handyvertrag. WICHTIG (Awin-Hinweis): Aktuell kann ausschließlich mobiler Traffic mit direktem Einstieg in Play Store oder App Store getrackt werden — Desktop-Klicks werden möglicherweise nicht vergütet. fraenk deshalb nicht als klassischen Desktop-Handyvergleich darstellen, sondern sachlich als App-basierten SIM-only-/eSIM-Tarif einordnen (App-Charakter steht in der description). Keine Garantie-/Superlativ-Aussagen (kein „bestes Netz“, kein „günstigster Tarif“, kein „garantiert sparen“), keine Cashback-/Gutschein-/Bonusversprechen, kein Paid-Search-/Brand-Bidding-/Social-Ads-Kontext. SubID über clickref-Parameter, kategoriebezogen.",
   },
 
   // --- Internet & DSL -------------------------------------------------------

@@ -36,6 +36,7 @@ export const categories: Category[] = [
     sensitive: false,
     partnerIds: [
       "handy-congstar",
+      "handy-fraenk",
       "handy-vergleichsportal",
       "handy-netzbetreiber",
       "tarif-tarifcheck",
