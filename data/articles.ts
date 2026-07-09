@@ -15,15 +15,19 @@ export const articles: Article[] = [
     title: "Handyvertrag vergleichen: worauf es wirklich ankommt",
     metaTitle: "Handyvertrag vergleichen: die wichtigsten Kriterien",
     metaDescription:
-      "Handytarife sinnvoll vergleichen: Datenvolumen, Laufzeit, Netzqualität und Gesamtkosten verständlich erklärt – mit Checkliste und FAQ.",
+      "Handyvertrag vergleichen: Datenvolumen, Netzqualität, Laufzeit, eSIM und Gesamtkosten verständlich erklärt – mit Checkliste, typischen Fehlern und FAQ.",
     publishedAt: "2026-07-05",
-    updatedAt: "2026-07-05",
-    readingMinutes: 7,
+    updatedAt: "2026-07-09",
+    readingMinutes: 10,
     categorySlug: "handyvertrag",
     sections: [
       {
         heading: "Den eigenen Bedarf kennen, bevor du vergleichst",
         body: "Der häufigste Fehler beim Tarifvergleich ist, mit dem Angebot statt mit dem eigenen Bedarf zu starten. Ein Blick in die Verbrauchsanzeige deines Smartphones oder die App deines aktuellen Anbieters zeigt dir, wie viel Datenvolumen du in den letzten Monaten tatsächlich genutzt hast. Viele Menschen buchen deutlich mehr Volumen, als sie verbrauchen – und zahlen Monat für Monat für eine Reserve, die sie nie anfassen.\n\nNeben dem Datenvolumen lohnt sich ein ehrlicher Blick auf dein Telefonie-Verhalten: Wer fast nur über Messenger kommuniziert, braucht keine besonderen Telefonie-Pakete. Wer viel unterwegs ist, sollte dagegen auf die Netzabdeckung an den eigenen Alltagsorten achten – dazu gleich mehr.",
+      },
+      {
+        heading: "SIM-only Tarif oder Handytarif mit Smartphone?",
+        body: "Die erste Grundsatzfrage vor jedem Vergleich: Brauchst du nur einen Tarif (SIM-only) oder auch ein neues Gerät? Ein SIM-only Tarif ist die flexible Variante – oft günstiger, häufig auch mit kurzer Laufzeit verfügbar, und du nutzt dein vorhandenes Smartphone einfach weiter.\n\nEin subventioniertes Smartphone im Vertrag wirkt attraktiv, weil die Anschaffung auf die Monatsraten verteilt wird. Rechne aber nach: Addiere alle Monatsraten des Bundle-Tarifs über die Laufzeit plus die einmalige Smartphone-Zuzahlung, und ziehe davon die Kosten eines vergleichbaren SIM-only Tarifs ab. Die Differenz ist der tatsächliche Gerätepreis – und der liegt nicht selten über dem Ladenpreis des Geräts.\n\nEs gibt keine pauschal richtige Antwort: Wer die Anschaffung nicht auf einmal stemmen will, kann mit einem Handytarif mit Smartphone gut fahren. Wer flexibel bleiben und insgesamt weniger zahlen will, fährt mit getrenntem Gerätekauf und günstigem SIM-only Tarif häufig besser. Wichtig ist nur: bewusst entscheiden, nicht vom Bundle-Preis blenden lassen.",
       },
       {
         heading: "Laufzeit oder monatlich kündbar: eine Kostenfrage",
@@ -38,8 +42,20 @@ export const articles: Article[] = [
         body: "Für einen fairen Vergleich zählen alle Kosten über die Laufzeit: Grundgebühr in der Aktionsphase, Grundgebühr danach, einmaliger Anschlusspreis, gegebenenfalls Versandkosten – und mögliche Erstattungen. Daraus ergibt sich der effektive Monatspreis.\n\nVorsicht bei zwei verbreiteten Mustern: Erstens die Datenautomatik, die bei aufgebrauchtem Volumen automatisch kostenpflichtig nachbucht – bei vielen Anbietern lässt sie sich deaktivieren, was direkt nach Vertragsschluss sinnvoll sein kann. Zweitens Zusatzoptionen mit Gratisphase (Streaming, Sicherheitspakete), die sich nach einigen Monaten stillschweigend in kostenpflichtige Abos verwandeln, wenn du sie nicht kündigst.",
       },
       {
-        heading: "Handy zum Vertrag: Bundle oder getrennt kaufen?",
-        body: "Ein subventioniertes Smartphone im Vertrag wirkt attraktiv, weil die Anschaffung auf die Monatsraten verteilt wird. Rechne aber nach: Addiere alle Monatsraten des Bundle-Tarifs über die Laufzeit und ziehe davon die Kosten eines vergleichbaren Tarifs ohne Gerät ab. Die Differenz ist der tatsächliche Gerätepreis – und der liegt nicht selten über dem Ladenpreis des Geräts.\n\nEs gibt keine pauschal richtige Antwort: Wer die Anschaffung nicht auf einmal stemmen will, kann mit einem Bundle gut fahren. Wer flexibel bleiben und insgesamt weniger zahlen will, fährt mit getrenntem Gerätekauf und günstigem Tarif häufig besser. Wichtig ist nur: bewusst entscheiden, nicht vom Bundle-Preis blenden lassen.",
+        heading: "eSIM, Roaming und WLAN-Calling: die Ausstattung im Blick",
+        body: "Neben Preis und Datenvolumen entscheiden einige Ausstattungsmerkmale darüber, wie gut ein Tarif zu deinem Alltag passt. Eine eSIM ist die digitale Variante der SIM-Karte: Sie wird per QR-Code oder App aktiviert, macht den Kartenversand überflüssig und erlaubt es, mehrere Profile auf einem Gerät zu nutzen – praktisch etwa für Smartwatches oder eine zweite Nummer. Nicht jeder Tarif unterstützt eSIM; wenn dein Gerät oder dein Nutzungsverhalten es erfordert, gehört das auf deine Prüfliste.\n\nBeim Roaming gilt innerhalb der EU der Grundsatz „Roam like at Home“: Du nutzt deinen Tarif zu Inlandskonditionen, mit Fair-Use-Grenzen beim Datenvolumen. Außerhalb der EU – etwa in der Schweiz, in der Türkei oder auf Fernreisen – können dagegen erhebliche Kosten entstehen. Wer dort regelmäßig unterwegs ist, sollte auf enthaltene Auslandspakete oder buchbare Reiseoptionen achten und im Zweifel eine Kostenairbag-Einstellung beim Anbieter prüfen.\n\nWLAN-Calling (Anrufe über das WLAN) hilft überall dort, wo der Mobilfunkempfang in Gebäuden schwach ist – im Altbau, im Keller-Büro, auf dem Land. Die Funktion ist bei vielen, aber nicht allen Tarifen enthalten. Ähnliches gilt für 5G: In manchen Tarifen ist es inklusive, in anderen kostenpflichtige Option – für die meisten Anwendungen ist gutes LTE im Alltag aber weiterhin ausreichend.",
+      },
+      {
+        heading: "Typische Fehler beim Handyvertrag",
+        body: "Die häufigsten Ärgernisse folgen wiederkehrenden Mustern – alle lassen sich mit wenigen Minuten Aufmerksamkeit vermeiden:\n\nNur den Aktionspreis vergleichen: Viele Tarife sind in den ersten Monaten rabattiert und werden danach spürbar teurer. Der Preis nach der Aktionsphase ist der, den du auf Dauer zahlst – er gehört ins Zentrum des Vergleichs.\n\nDie Anschlussgebühr übersehen: Der einmalige Anschlusspreis von oft 20 bis 40 Euro fehlt in der Preis-Schlagzeile, gehört aber in die Gesamtrechnung. Manche Anbieter erstatten ihn auf Antrag oder bei Online-Abschluss – das ist ein prüfenswerter Unterschied.\n\nZu viel Datenvolumen buchen: Die Reserve „für alle Fälle“ kostet jeden Monat. Der Blick in die Verbrauchsanzeige der letzten Monate ist die bessere Grundlage als das Bauchgefühl.\n\nDie Netzabdeckung nicht prüfen: Der günstigste Tarif nützt wenig, wenn das Netz an deinen Alltagsorten schwach ist. Verfügbarkeitskarten der Netzbetreiber und Erfahrungen aus dem Umfeld geben Orientierung.\n\nDatenautomatik und Zusatzoptionen laufen lassen: Automatische Volumen-Nachbuchungen und Gratis-Optionen, die sich in kostenpflichtige Abos verwandeln, sind vermeidbare Kostenquellen – direkt nach Vertragsschluss kontrollieren.\n\nDie Kündigungsfrist verpassen: Nach der Mindestlaufzeit ist der Vertrag monatlich kündbar – aber wer das Laufzeitende nicht notiert hat, zahlt oft Monate oder Jahre den Folgepreis weiter, ohne zu vergleichen.",
+      },
+      {
+        heading: "Schritt für Schritt: deine Checkliste zum Handyvertrag",
+        body: "1. Verbrauch prüfen: durchschnittliches Datenvolumen und Telefonie-Verhalten der letzten drei bis sechs Monate aus der Verbrauchsanzeige ablesen.\n\n2. Netzabdeckung an deinen Alltagsorten prüfen: zu Hause, Arbeitsplatz, Pendelweg – per Verfügbarkeitskarte der Netzbetreiber.\n\n3. Grundsatzfrage klären: SIM-only Tarif oder Handytarif mit Smartphone?\n\n4. Laufzeitwunsch festlegen: 24 Monate für Konditionsvorteile oder monatlich kündbar für Flexibilität.\n\n5. Bedarf an Ausstattung notieren: 5G, eSIM, WLAN-Calling, Roaming außerhalb der EU.\n\n6. Handyvertrag vergleichen – mit deinem realistischen Datenvolumen, nicht mit Wunschwerten.\n\n7. Für die engere Auswahl den Effektivpreis rechnen: Grundgebühr beider Preisphasen, Anschlussgebühr, gegebenenfalls Smartphone-Zuzahlung, abzüglich Gutschriften – geteilt durch die Laufzeitmonate.\n\n8. Vertragsdetails prüfen: Vertragslaufzeit, Kündigungsfrist, Preis nach Aktionsphase, Bedingungen für Wechselboni.\n\n9. Abschließen – der Vertragsabschluss erfolgt immer direkt beim jeweiligen Anbieter oder über den Vergleichspartner, zu dessen Konditionen. Bei einem Wechsel die Rufnummernmitnahme gleich mit beauftragen.\n\n10. Nach dem Abschluss: Datenautomatik prüfen und bei Bedarf deaktivieren, Gratis-Zusatzoptionen aussortieren, Laufzeitende und Kündigungsfrist als Kalendererinnerung notieren.",
+      },
+      {
+        heading: "Vergleichsmöglichkeiten in der Kategorie Handyvertrag",
+        body: "Wenn du nach dieser Vorbereitung konkret vergleichen möchtest, findest du in unserer Kategorie Handyvertrag gebündelte Einstiegspunkte und gekennzeichnete Vergleichsmöglichkeiten – den Link zur Kategorie findest du direkt unter diesem Artikel.\n\nZur Einordnung: Tarvyo24 bietet allgemeine Orientierung und verlinkt auf Vergleichsangebote. Prüfung, Vertragsabschluss und Kundenbeziehung erfolgen immer beim jeweiligen Anbieter oder Vergleichspartner – dort gelten dessen Konditionen und Datenschutzbestimmungen. Welcher Tarif zu dir passt, hängt von deinem Verbrauch, deinen Alltagsorten und deinen Prioritäten ab – eine pauschale Empfehlung kann seriöserweise kein Ratgeber geben.",
       },
     ],
     faq: [
@@ -62,6 +78,16 @@ export const articles: Article[] = [
         question: "Worauf sollte ich nach Vertragsschluss direkt achten?",
         answer:
           "Prüfe, ob eine Datenautomatik aktiv ist, und deaktiviere sie bei Bedarf. Notiere dir das Ende der Aktionsphase und der Mindestlaufzeit – zum Beispiel als Kalendererinnerung –, damit du rechtzeitig vergleichen und reagieren kannst, bevor sich der Preis erhöht.",
+      },
+      {
+        question: "Was ist eine eSIM – und brauche ich sie?",
+        answer:
+          "Eine eSIM ist fest im Gerät verbaut und wird digital aktiviert, etwa per QR-Code – ohne Kartenversand und Kartenwechsel. Nötig ist sie, wenn dein Gerät keinen SIM-Schacht mehr hat oder du mehrere Profile parallel nutzen willst (z. B. Smartwatch, Zweitnummer, Reise-Tarif). Prüfe vor dem Abschluss, ob der Tarif eSIM unterstützt.",
+      },
+      {
+        question: "Kostet die Handynutzung im EU-Ausland extra?",
+        answer:
+          "Innerhalb der EU gilt „Roam like at Home“: Telefonie, SMS und Daten nutzt du grundsätzlich zu Inlandskonditionen, wobei Anbieter beim Datenvolumen Fair-Use-Grenzen setzen dürfen. Außerhalb der EU – etwa in der Schweiz oder der Türkei – können dagegen deutliche Zusatzkosten entstehen; dort lohnt der Blick auf Auslandsoptionen vor der Reise.",
       },
     ],
     relatedPartnerIds: ["handy-vergleichsportal", "handy-netzbetreiber"],
