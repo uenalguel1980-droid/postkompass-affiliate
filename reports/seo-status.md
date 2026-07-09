@@ -1,0 +1,49 @@
+# SEO- & Indexierungsstatus (Tarvyo24)
+
+**Stand:** 09.07.2026 · Reines Arbeitsdokument — keine App-Dateien betroffen.
+
+---
+
+## 1. Sitemap
+
+- **URL:** `https://tarvyo24.de/sitemap.xml` (einzige einzureichende Sitemap)
+- **Status in der Google Search Console:** erfolgreich
+- **Zuletzt bekannte erkannte Seiten:** 19
+- **Hinweis:** Die Sitemap kann nach den neuen Ratgebern bereits mehr URLs enthalten als Google Search Console aktuell anzeigt. Google Search Console zeigt noch 19 erkannte Seiten, weil die Sitemap zuletzt am 07.07. gelesen wurde. Die neuen/aktualisierten Ratgeber müssen per URL-Prüfung getestet und die Indexierung beantragt werden; danach aktualisiert Google die erkannten Seiten zeitversetzt.
+
+> ⚠️ **Wichtig:** Einzelne Seiten dürfen **nicht** als Sitemap eingereicht werden — ausschließlich `/sitemap.xml`. Einzelne URLs werden nur über die URL-Prüfung getestet und zur Indexierung beantragt.
+
+## 2. Aktive Kategorien (SEO-Fokus)
+
+| Kategorie | URL |
+|---|---|
+| Strom & Gas | `/kategorien/strom-gas/` |
+| Internet & DSL | `/kategorien/internet-dsl/` |
+| Handyvertrag | `/kategorien/handyvertrag/` |
+
+## 3. Aktive Ratgeber
+
+| Ratgeber | URL | Stärkt Kategorie |
+|---|---|---|
+| Stromanbieter wechseln: so gehst du sachlich vor | `/ratgeber/stromanbieter-wechseln/` | strom-gas |
+| Strom- und Gasanbieter wechseln: so gehst du sachlich vor | `/ratgeber/strom-gas-wechseln/` | strom-gas |
+| Internetvertrag abschließen: Schritt für Schritt zum passenden Tarif | `/ratgeber/internetvertrag-abschliessen/` | internet-dsl |
+| Internetvertrag abschließen: worauf du achten solltest | `/ratgeber/internetvertrag-worauf-achten/` | internet-dsl |
+| Handyvertrag vergleichen: worauf es wirklich ankommt (am 09.07.2026 erweitert) | `/ratgeber/handyvertrag-vergleichen/` | handyvertrag |
+
+Alle Ratgeber verlinken intern auf ihre Kategorie; die Kategorieseiten listen sie unter „Passende Ratgeber" in der Reihenfolge aus `relatedArticleSlugs`.
+
+## 4. Google Search Console — aktueller Stand
+
+- **Sitemap:** erfolgreich eingereicht und verarbeitet.
+- **Live-Test Strom/Gas:** Seite war indexierbar.
+- **Neue Ratgeber:** müssen über die **URL-Prüfung einzeln getestet** und die **Indexierung beantragt** werden (sie sind zwar in der Sitemap, die Beantragung beschleunigt aber die Aufnahme).
+- **Leistung:** aktuell 0 Klicks / 0 Impressionen — bei einer neuen Website normal und kein Fehlerindikator.
+
+## 5. Nächste SEO-Schritte
+
+1. Neue Ratgeber einzeln per URL-Prüfung testen.
+2. Indexierung beantragen.
+3. Nach 7 Tagen die Leistung prüfen (Impressionen als erstes Signal).
+4. Nach 14 Tagen die Suchanfragen prüfen (welche Begriffe erzeugen Impressionen?).
+5. Danach die nächsten Content-Themen priorisieren.
