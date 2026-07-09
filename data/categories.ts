@@ -178,7 +178,7 @@ export const categories: Category[] = [
         partnerId: "energie-tarifrechner",
       },
     ],
-    relatedArticleSlugs: ["strom-gas-wechseln"],
+    relatedArticleSlugs: ["stromanbieter-wechseln", "strom-gas-wechseln"],
     icon: "zap",
   },
   {

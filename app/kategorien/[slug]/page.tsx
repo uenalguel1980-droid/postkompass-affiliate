@@ -55,9 +55,10 @@ export default async function KategorieDetailPage({
   if (!category) notFound();
 
   const partners = getPartnersByIds(category.partnerIds);
-  const relatedArticles = articles.filter((article) =>
-    category.relatedArticleSlugs.includes(article.slug),
-  );
+  // Anzeige-Reihenfolge folgt relatedArticleSlugs — die Kategorie steuert sie.
+  const relatedArticles = category.relatedArticleSlugs
+    .map((articleSlug) => articles.find((article) => article.slug === articleSlug))
+    .filter((article) => article !== undefined);
 
   return (
     <Container className="py-10 sm:py-14">

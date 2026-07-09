@@ -182,6 +182,71 @@ export const articles: Article[] = [
     sensitive: false,
   },
   {
+    slug: "stromanbieter-wechseln",
+    title: "Stromanbieter wechseln: so gehst du sachlich vor",
+    metaTitle: "Stromanbieter wechseln: Daten, Kriterien & Checkliste",
+    metaDescription:
+      "Stromanbieter wechseln Schritt für Schritt: welche Daten du brauchst, wie du Arbeitspreis, Grundpreis und Neukundenbonus einordnest – mit Checkliste und FAQ.",
+    publishedAt: "2026-07-09",
+    updatedAt: "2026-07-09",
+    readingMinutes: 9,
+    categorySlug: "strom-gas",
+    sections: [
+      {
+        heading: "Warum sich der Blick auf den eigenen Stromtarif lohnt",
+        body: "Strom ist ein Produkt, das sich zwischen Anbietern nicht unterscheidet: Aus der Steckdose kommt immer derselbe Strom, egal mit wem du einen Vertrag hast. Was sich unterscheidet, sind Preis und Vertragsbedingungen – und genau deshalb kann sich die Prüfung eines Wechsels lohnen. Wer seinen Tarif nie aktiv gewählt hat, zahlt häufig mehr als nötig, ohne dafür eine andere Leistung zu bekommen.\n\nEin Wechsel ist dabei kein Selbstzweck: Ob er sich für dich rechnet, hängt von deinem aktuellen Tarif, deinem Verbrauch und den Konditionen der Alternativen ab. Dieser Ratgeber zeigt dir, wie du das sachlich prüfst – ohne Zeitdruck und ohne dich von Werbeversprechen leiten zu lassen. Eine Ersparnis lässt sich dabei nie pauschal versprechen; sie ergibt sich immer aus dem konkreten Vergleich deiner Zahlen.",
+      },
+      {
+        heading: "Wann sich ein Wechsel besonders lohnt",
+        body: "Es gibt Situationen, in denen die Prüfung besonders naheliegt. Die häufigste: Du bist in der Grundversorgung, also im Standardtarif des örtlichen Versorgers, weil du nie aktiv gewechselt hast. Grundversorgungstarife sind oft teurer als Sonderverträge – und mit einer Frist von zwei Wochen jederzeit kündbar, du bist also nicht gebunden.\n\nEbenfalls ein guter Anlass: Dein Anbieter kündigt eine Preiserhöhung an. Dann hast du ein Sonderkündigungsrecht und kannst unabhängig von der regulären Vertragslaufzeit wechseln – der Anbieter muss dich auf dieses Recht hinweisen. Auch das Ende einer Preisgarantie oder das Auslaufen der Erstvertragslaufzeit sind sinnvolle Zeitpunkte, weil viele Tarife nach der Aktionsphase deutlich teurer werden.\n\nUnd schließlich der Umzug: Ein neuer Wohnort bedeutet ohnehin einen neuen Liefervertrag – ein guter Moment, um nicht automatisch in die Grundversorgung zu rutschen, sondern bewusst zu vergleichen.",
+      },
+      {
+        heading: "Diese Daten solltest du vor dem Vergleich bereithalten",
+        body: "Ein Vergleich ist nur so gut wie die Zahlen, mit denen du ihn fütterst. Bevor du einen Stromtarif vergleichst, lege dir drei Dinge zurecht: deine letzte Jahresabrechnung, deine Postleitzahl und – falls schon absehbar – das Datum, zu dem dein aktueller Vertrag kündbar ist.\n\nAus der Jahresabrechnung brauchst du vor allem den Jahresverbrauch in Kilowattstunden. Gib im Vergleichsrechner immer diesen tatsächlichen Wert an, nicht die voreingestellten Durchschnittswerte – Schätzungen nach Haushaltsgröße verzerren das Ergebnis, weil Boni und Preisstaffeln verbrauchsabhängig wirken. Außerdem findest du auf der Abrechnung deinen aktuellen Arbeitspreis und Grundpreis: Das ist deine Vergleichsbasis, an der sich jedes Angebot messen lassen muss.\n\nHilfreich sind zusätzlich der Name deines aktuellen Tarifs und deine Zählernummer – Letztere brauchst du spätestens beim Abschluss des neuen Vertrags.",
+      },
+      {
+        heading: "Worauf du bei Stromtarifen achten solltest",
+        body: "Ein Stromtarif besteht aus mehreren Bausteinen, die zusammen über die tatsächlichen Kosten entscheiden. Die folgenden Kriterien solltest du bei jedem Angebot prüfen:\n\nArbeitspreis: der Preis pro verbrauchter Kilowattstunde. Er ist der größte Kostenhebel bei normalem und hohem Verbrauch – kleine Unterschiede pro Kilowattstunde summieren sich übers Jahr.\n\nGrundpreis: der feste Betrag pro Monat oder Jahr, unabhängig vom Verbrauch. Bei niedrigem Verbrauch (kleine Haushalte, Zweitwohnung) fällt der Grundpreis relativ stärker ins Gewicht – dann kann ein Tarif mit niedrigem Grundpreis und etwas höherem Arbeitspreis günstiger sein als umgekehrt.\n\nVertragslaufzeit: Üblich sind zwölf Monate, es gibt auch kürzere und monatlich kündbare Tarife. Eine lange Laufzeit bindet dich – sinnvoll ist sie vor allem in Kombination mit einer belastbaren Preisgarantie.\n\nKündigungsfrist: Sie entscheidet, wie flexibel du am Laufzeitende bist. Nach der Erstlaufzeit verlängern sich Verträge automatisch, sind dann aber mit einer Frist von einem Monat kündbar. Notiere dir Laufzeitende und Kündigungsfrist direkt nach dem Abschluss.\n\nPreisgarantie: Prüfe nicht nur die Dauer, sondern den Umfang. Eine eingeschränkte Preisgarantie klammert Steuern, Abgaben und Umlagen aus – steigen diese, darf der Preis trotz Garantie angepasst werden. Eine umfassende Garantie deckt fast alle Bestandteile ab und ist entsprechend belastbarer.\n\nBonusbedingungen: Ein Neukundenbonus macht viele Angebote im ersten Jahr rechnerisch attraktiv. Entscheidend sind die Bedingungen: Oft wird er erst nach zwölf Monaten ununterbrochener Belieferung fällig oder mit der ersten Jahresabrechnung verrechnet. Rechne jedes Angebot einmal mit und einmal ohne Bonus – der Preis ohne Bonus ist der, den du ab dem zweiten Jahr zahlst.\n\nAbschläge: Der monatliche Abschlag ist eine Vorauszahlung auf deinen erwarteten Verbrauch, keine Flatrate. Ein auffällig niedriger Abschlag macht einen Tarif nicht günstiger – er verschiebt die Kosten nur in die Jahresabrechnung. Prüfe, ob der Abschlag realistisch zu deinem Verbrauch passt, und lass ihn bei Bedarf anpassen.",
+      },
+      {
+        heading: "Typische Fehler beim Wechsel",
+        body: "Die meisten Ärgernisse beim Stromanbieterwechsel folgen wiederkehrenden Mustern – und lassen sich mit etwas Aufmerksamkeit vermeiden:\n\nNur auf den ersten Jahrespreis schauen: Viele Tarife sind mit Bonus im ersten Jahr günstig und danach deutlich teurer. Wer nicht vorhat, jedes Jahr zu wechseln, sollte den Preis ab dem zweiten Jahr zur Entscheidungsgrundlage machen.\n\nMit geschätztem Verbrauch vergleichen: Voreingestellte Durchschnittswerte im Vergleichsrechner führen zu Ergebnissen, die auf deinen Haushalt nicht zutreffen. Immer den tatsächlichen Jahresverbrauch aus der Abrechnung verwenden.\n\nSelbst kündigen, obwohl der neue Anbieter das übernimmt: Im Normalfall kündigt der neue Anbieter beim alten und koordiniert den Liefertermin – so entsteht keine Lücke und keine Doppelbelieferung. Nur beim Sonderkündigungsrecht wegen einer Preiserhöhung musst du in der Regel selbst und fristgerecht kündigen.\n\nFilter im Vergleichsrechner ungeprüft übernehmen: Manche Voreinstellungen blenden Tarife ein oder aus (etwa nach Bonusarten oder Vertragslaufzeiten). Ein kurzer Blick in die Filtereinstellungen sorgt dafür, dass du vergleichst, was du wirklich vergleichen willst.\n\nVorauskasse- und Pakettarife unterschätzen: Bei Vorauskasse zahlst du Monate im Voraus und trägst das Insolvenzrisiko des Anbieters; bei Paketpreisen kaufst du eine feste Strommenge und zahlst bei Mehrverbrauch teuer nach. Verbraucherzentralen raten von beiden Modellen seit Jahren allgemein ab.\n\nDen Zählerstand nicht dokumentieren: Notiere zum Lieferantenwechsel den Zählerstand (gern mit Foto). So lassen sich Schlussrechnung des alten und Erstabrechnung des neuen Anbieters sauber abgrenzen.",
+      },
+      {
+        heading: "Schritt für Schritt: deine Checkliste für den Wechsel",
+        body: "Wenn du die Punkte der Reihe nach abarbeitest, bist du sachlich vorbereitet:\n\n1. Jahresabrechnung heraussuchen: Jahresverbrauch, Arbeitspreis, Grundpreis und Vertragsdaten notieren.\n\n2. Kündigungssituation klären: Bist du in der Grundversorgung (zwei Wochen Frist), läuft eine Mindestlaufzeit, oder hast du wegen einer Preiserhöhung ein Sonderkündigungsrecht?\n\n3. Stromtarife mit dem tatsächlichen Jahresverbrauch vergleichen – nicht mit Schätzwerten.\n\n4. Für die engere Auswahl jeden Tarif doppelt rechnen: erstes Jahr mit Bonus, ab dem zweiten Jahr ohne Bonus.\n\n5. Vertragsbedingungen prüfen: Laufzeit, Kündigungsfrist, Umfang der Preisgarantie, Bonusbedingungen, Höhe des Abschlags.\n\n6. Vorauskasse- und Pakettarife aussortieren.\n\n7. Neuen Vertrag abschließen – der Abschluss erfolgt dabei immer direkt beim jeweiligen Anbieter oder über das Vergleichsportal, zu dessen Bedingungen. Die Kündigung des alten Vertrags übernimmt im Normalfall der neue Anbieter.\n\n8. Zum Wechseltermin den Zählerstand ablesen und dokumentieren.\n\n9. Schlussrechnung des alten Anbieters prüfen, sobald sie kommt – stimmen Zählerstand und Abrechnungszeitraum?\n\n10. Laufzeitende und Kündigungsfrist des neuen Vertrags notieren, etwa als Kalendererinnerung – dann bist du beim nächsten Mal vorbereitet.",
+      },
+      {
+        heading: "Vergleichsmöglichkeiten in der Kategorie Strom & Gas",
+        body: "Wenn du nach dieser Vorbereitung konkret vergleichen möchtest, findest du in unserer Kategorie Strom & Gas gebündelte Einstiegspunkte und gekennzeichnete Vergleichsmöglichkeiten – den Link zur Kategorie findest du direkt unter diesem Artikel.\n\nZur Einordnung: Tarvyo24 bietet allgemeine Orientierung und verlinkt auf Vergleichsangebote. Prüfung, Vertragsabschluss und Kundenbeziehung erfolgen immer beim jeweiligen Anbieter oder Vergleichspartner – dort gelten dessen Konditionen und Datenschutzbestimmungen. Welcher Tarif zu dir passt, hängt von deinem Verbrauch und deinen Prioritäten ab; eine pauschale Empfehlung kann und will dieser Ratgeber nicht geben.",
+      },
+    ],
+    faq: [
+      {
+        question: "Wie lange dauert ein Stromanbieterwechsel?",
+        answer:
+          "Technisch ist der Lieferantenwechsel inzwischen innerhalb weniger Werktage möglich. Maßgeblich ist aber die Kündigungsfrist deines bestehenden Vertrags: Der neue Anbieter startet die Belieferung erst, wenn der alte Vertrag endet. In der Grundversorgung geht es mit zwei Wochen Frist entsprechend schnell.",
+      },
+      {
+        question: "Muss ich meinem alten Stromanbieter selbst kündigen?",
+        answer:
+          "Im Normalfall nicht – der neue Anbieter übernimmt die Kündigung und koordiniert den Wechseltermin. Eine wichtige Ausnahme: Wenn du wegen einer Preiserhöhung dein Sonderkündigungsrecht nutzen willst, solltest du in der Regel selbst und fristgerecht kündigen, weil die Frist sonst verstreichen kann.",
+      },
+      {
+        question: "Was ist der Unterschied zwischen Arbeitspreis und Grundpreis?",
+        answer:
+          "Der Arbeitspreis ist der Preis pro verbrauchter Kilowattstunde, der Grundpreis eine feste Gebühr unabhängig vom Verbrauch. Bei hohem Verbrauch wiegt der Arbeitspreis schwerer, bei niedrigem Verbrauch der Grundpreis – deshalb kann derselbe Tarif für zwei Haushalte unterschiedlich attraktiv sein.",
+      },
+      {
+        question: "Ist der monatliche Abschlag mein tatsächlicher Strompreis?",
+        answer:
+          "Nein. Der Abschlag ist eine Vorauszahlung auf den erwarteten Jahresverbrauch. Abgerechnet wird mit der Jahresabrechnung anhand des tatsächlichen Verbrauchs – ein zu niedriger Abschlag führt zu einer Nachzahlung, ein zu hoher zu einer Erstattung. Für den Tarifvergleich zählen Arbeitspreis, Grundpreis und Bonusbedingungen, nicht die Abschlagshöhe.",
+      },
+    ],
+    relatedPartnerIds: [],
+    sensitive: false,
+  },
+  {
     slug: "kreditkarte-vergleichen",
     title: "Kreditkarte vergleichen: Kartentypen und Kosten verstehen",
     metaTitle: "Kreditkarte vergleichen: Kartentypen & Kosten erklärt",
