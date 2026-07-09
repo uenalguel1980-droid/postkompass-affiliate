@@ -121,7 +121,7 @@ export const categories: Category[] = [
         partnerId: "dsl-tarifrechner",
       },
     ],
-    relatedArticleSlugs: ["internetvertrag-worauf-achten"],
+    relatedArticleSlugs: ["internetvertrag-abschliessen", "internetvertrag-worauf-achten"],
     icon: "wifi",
   },
   {

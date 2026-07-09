@@ -125,6 +125,71 @@ export const articles: Article[] = [
     sensitive: false,
   },
   {
+    slug: "internetvertrag-abschliessen",
+    title: "Internetvertrag abschließen: Schritt für Schritt zum passenden Tarif",
+    metaTitle: "Internetvertrag abschließen: Anschlussarten & Checkliste",
+    metaDescription:
+      "Internetvertrag abschließen ohne Überraschungen: DSL, Kabel, Glasfaser oder LTE/5G, Routerkosten, Vertragslaufzeit und Kündigungsfrist – mit Checkliste und FAQ.",
+    publishedAt: "2026-07-09",
+    updatedAt: "2026-07-09",
+    readingMinutes: 9,
+    categorySlug: "internet-dsl",
+    sections: [
+      {
+        heading: "Warum sich die genaue Prüfung lohnt",
+        body: "Ein Internetvertrag begleitet dich oft zwei Jahre – und die Angebote sind bewusst so gestaltet, dass der erste Eindruck günstiger wirkt als die Realität über die Laufzeit: Aktionspreise für die ersten Monate, Anschlussgebühren im Kleingedruckten, Routerkosten als separater Posten. Wer nur auf den beworbenen Monatspreis schaut, vergleicht deshalb selten das, was er am Ende tatsächlich zahlt.\n\nDazu kommt eine Besonderheit, die es bei Strom oder Mobilfunk so nicht gibt: Nicht jeder Tarif ist an jeder Adresse verfügbar. Bevor du Internetanbieter vergleichst, entscheidet dein Wohnort, welche Anschlussarten überhaupt infrage kommen. Dieser Ratgeber führt dich in der sinnvollen Reihenfolge durch die Entscheidung – von der Anschlussart über die Tarifkriterien bis zur Checkliste für den Abschluss.",
+      },
+      {
+        heading: "DSL, Kabel, Glasfaser oder Mobilfunk: die Anschlussarten",
+        body: "DSL läuft über die Telefonleitung und ist die am weitesten verbreitete Anschlussart. Die erreichbare Geschwindigkeit hängt von der Leitungslänge zum Verteiler ab – ein DSL Vertrag mit hoher beworbener Bandbreite nützt wenig, wenn die Leitung an deiner Adresse weniger hergibt. Für viele Haushalte mit normalem Nutzungsverhalten reicht DSL aber gut aus.\n\nKabel Internet nutzt das TV-Kabelnetz und bietet hohe Download-Geschwindigkeiten zu oft günstigen Preisen. Die Bandbreite wird allerdings nachbarschaftlich geteilt – in Stoßzeiten kann die Leistung spürbar schwanken. Der Upload fällt meist deutlich niedriger aus als der Download.\n\nGlasfaser (FTTH) führt eine eigene Leitung bis in die Wohnung und liefert die stabilsten Werte, auch beim Upload. Die Glasfaser Verfügbarkeit wächst, ist aber regional sehr unterschiedlich – und Achtung bei der Werbung: Manche Angebote heißen „Glasfaser“, obwohl die letzten Meter über Kupfer- oder Kabelleitungen laufen. Entscheidend ist, welche Technik tatsächlich bei dir ankommt.\n\nInternet über LTE oder 5G (Homespot-Tarife) ist eine Alternative, wo Festnetzanschlüsse schwach sind, oder als Übergangslösung, etwa nach einem Umzug. Die Leistung hängt von der Funkabdeckung und Auslastung am Standort ab; manche Tarife drosseln nach einem bestimmten Datenvolumen. Als vollwertiger Festnetzersatz eignet sich das vor allem dort, wo der Empfang nachweislich gut ist.",
+      },
+      {
+        heading: "Diese Daten solltest du vor dem Vergleich bereithalten",
+        body: "Deine genaue Adresse ist die wichtigste Angabe: Straße, Hausnummer, Postleitzahl. Ohne sie ist keine seriöse Verfügbarkeitsprüfung möglich – und ein Vergleich ohne Verfügbarkeitsprüfung ist wertlos.\n\nDeine gewünschte Geschwindigkeit: Überlege, wie viele Personen und Geräte gleichzeitig online sind und was ihr tut. Streaming, Videokonferenzen und normales Surfen brauchen weniger, als die Werbung suggeriert; wer große Dateien hochlädt oder im Homeoffice arbeitet, sollte auch auf den Upload achten.\n\nDeinen bisherigen Anbieter und Vertrag: Name des Tarifs, was du monatlich zahlst, welche Geschwindigkeit du gebucht hast. Das ist deine Vergleichsbasis – manchmal ist auch ein besserer Tarif beim bisherigen Anbieter eine Option.\n\nVertragsende und Kündigungsfrist deines laufenden Vertrags: Beides bestimmt, wann der Wechsel überhaupt möglich ist und wer kündigen sollte (dazu unten mehr). Du findest es in den Vertragsunterlagen, im Kundenportal oder auf der Rechnung.\n\nBenötigte Geräte: Hast du einen eigenen Router, und unterstützt er die neue Anschlussart? DSL-, Kabel- und Glasfaser-Router sind nicht untereinander austauschbar. Falls du Telefonie oder TV über den Anschluss nutzt, gehört auch das auf die Liste.",
+      },
+      {
+        heading: "Worauf du beim Tarif achten solltest",
+        body: "Downloadgeschwindigkeit: die beworbene „bis zu“-Angabe ist ein Maximalwert. Im Produktinformationsblatt stehen auch die normalerweise verfügbare und die minimale Geschwindigkeit – diese Werte sind die ehrlichere Orientierung.\n\nUploadgeschwindigkeit: fällt bei vielen Tarifen deutlich niedriger aus als der Download. Für Videokonferenzen, Cloud-Backups und das Versenden großer Dateien ist sie aber entscheidend.\n\nMindestvertragslaufzeit: Üblich sind 24 Monate, es gibt auch kürzere und monatlich kündbare Tarife – Letztere oft gegen Aufpreis. Je länger die Laufzeit, desto wichtiger ist der Preis nach der Aktionsphase.\n\nKündigungsfrist: Nach der Mindestlaufzeit verlängert sich der Vertrag automatisch und ist dann mit einer Frist von einem Monat kündbar. Notiere dir Laufzeitende und Kündigungsfrist direkt nach dem Abschluss.\n\nRouterkosten: Ein Mietrouter kostet meist einige Euro pro Monat – über 24 Monate kommt da ein Betrag zusammen, der im Vergleich oft fehlt. Dank Routerfreiheit darfst du auch ein eigenes Gerät anschließen; ob sich das rechnet, zeigt der Vergleich von Mietkosten über die Laufzeit und Kaufpreis.\n\nAnschlussgebühr: Der einmalige Bereitstellungspreis unterscheidet sich je nach Anbieter und Aktion deutlich – manchmal entfällt er, manchmal werden mehrere Dutzend Euro fällig. Er gehört in die Gesamtrechnung.\n\nAktionspreis und Folgepreis: Viele Tarife sind in den ersten Monaten günstig und steigen danach. Rechne alle Kosten über die Mindestlaufzeit zusammen – beide Preisphasen, Anschlussgebühr, Routerkosten, abzüglich Gutschriften – und teile durch die Monate. Dieser Effektivpreis ist die Zahl, mit der sich Angebote ehrlich vergleichen lassen.\n\nVerfügbarkeitsprüfung: Führe sie immer mit der genauen Adresse direkt beim Anbieter durch, bevor du dich auf einen Tarif festlegst. Vergleichsportale geben eine erste Orientierung; verbindlich ist die Prüfung des Anbieters selbst.",
+      },
+      {
+        heading: "Typische Fehler beim Internetvertrag",
+        body: "Nur den Aktionspreis vergleichen: Der günstige Einstiegspreis gilt oft nur sechs oder zwölf Monate, der Vertrag aber 24. Ohne Effektivpreisrechnung gewinnt im Vergleich regelmäßig das Angebot, das über die Laufzeit teurer ist.\n\nRouterkosten und Anschlussgebühr vergessen: Beide Posten stehen selten in der Preis-Schlagzeile, machen über zwei Jahre aber leicht einen dreistelligen Betrag aus.\n\nDen alten Vertrag selbst kündigen: Beim Anbieterwechsel sollte der neue Anbieter den Wechsel koordinieren – so ist gesetzlich abgesichert, dass die Versorgung beim Wechsel nicht länger als einen Kalendertag unterbrochen ist. Wer auf eigene Faust kündigt, riskiert eine Lücke oder doppelte Verträge.\n\nGeschwindigkeit „auf Vorrat“ buchen: Höhere Bandbreite kostet dauerhaft mehr, ein Downgrade während der Laufzeit ist selten möglich. Umgekehrt ist ein Upgrade meist unkompliziert – im Zweifel also lieber am tatsächlichen Bedarf orientieren.\n\nMarketing-Glasfaser für echte Glasfaser halten: Prüfe, ob die Leitung tatsächlich bis in die Wohnung reicht (FTTH). Der Unterschied zeigt sich in Stabilität und Upload.\n\nZusatzoptionen ungeprüft übernehmen: TV-Pakete, Sicherheitssoftware oder Service-Optionen sind in den ersten Monaten oft gratis und verlängern sich dann kostenpflichtig. Was du nicht brauchst, direkt abwählen oder mit Kalendererinnerung kündigen.",
+      },
+      {
+        heading: "Schritt für Schritt: deine Checkliste zum neuen Internetvertrag",
+        body: "1. Eigenen Bedarf klären: Wie viele Personen und Geräte, welche Anwendungen, wie wichtig ist der Upload?\n\n2. Laufenden Vertrag prüfen: Vertragsende, Kündigungsfrist und aktueller Preis als Vergleichsbasis notieren.\n\n3. Verfügbarkeit an deiner Adresse prüfen: Welche Anschlussarten (DSL, Kabel, Glasfaser, ggf. LTE/5G) kommen infrage?\n\n4. Internetanbieter vergleichen – mit realistischer Wunschgeschwindigkeit und deiner genauen Adresse.\n\n5. Für die engere Auswahl den Effektivpreis rechnen: beide Preisphasen, Anschlussgebühr, Routerkosten, Gutschriften – geteilt durch die Laufzeit.\n\n6. Vertragsdetails prüfen: Mindestvertragslaufzeit, Kündigungsfrist, Produktinformationsblatt mit den realistischen Geschwindigkeitsangaben.\n\n7. Routerfrage entscheiden: Mietgerät oder eigenes Gerät – passt der vorhandene Router zur neuen Anschlussart?\n\n8. Verfügbarkeit direkt beim gewählten Anbieter bestätigen lassen und erst dann abschließen. Der Vertragsabschluss erfolgt dabei immer beim jeweiligen Anbieter oder über den Vergleichspartner – zu dessen Konditionen.\n\n9. Beim Wechsel den neuen Anbieter mit der Kündigung des alten Vertrags beauftragen, nicht selbst kündigen.\n\n10. Nach dem Abschluss: Zusatzoptionen kontrollieren, Laufzeitende und Kündigungsfrist als Kalendererinnerung notieren – und nach der Schaltung die tatsächliche Geschwindigkeit messen.",
+      },
+      {
+        heading: "Vergleichsmöglichkeiten in der Kategorie Internet & DSL",
+        body: "Wenn du nach dieser Vorbereitung konkret vergleichen möchtest, findest du in unserer Kategorie Internet & DSL gebündelte Einstiegspunkte und gekennzeichnete Vergleichsmöglichkeiten – der Link zur Kategorie steht direkt unter diesem Artikel. Dort findest du auch unseren vertiefenden Ratgeber zu Effektivpreis, Routerfrage und deinen Rechten bei zu langsamem Internet.\n\nZur Einordnung: Tarvyo24 bietet allgemeine Orientierung und verlinkt auf Vergleichsangebote. Prüfung, Vertragsabschluss und Kundenbeziehung erfolgen immer beim jeweiligen Anbieter oder Vergleichspartner – dort gelten dessen Konditionen und Datenschutzbestimmungen. Ob ein Tarif an deiner Adresse verfügbar ist und zu dir passt, ergibt sich erst aus der konkreten Prüfung; pauschale Aussagen dazu kann kein Ratgeber treffen.",
+      },
+    ],
+    faq: [
+      {
+        question: "Ist Internet über LTE oder 5G ein vollwertiger Ersatz für DSL?",
+        answer:
+          "Das hängt vom Standort ab: Bei guter Funkabdeckung können Homespot-Tarife alltagstauglich sein, die Leistung schwankt aber stärker als bei Festnetzanschlüssen und manche Tarife drosseln nach einem Datenvolumen. Sinnvoll ist ein Test am eigenen Wohnort – etwa in einer Widerrufs- oder Testphase – bevor du dich langfristig bindest.",
+      },
+      {
+        question: "Wer kündigt meinen alten Internetvertrag beim Wechsel?",
+        answer:
+          "Beauftrage den neuen Anbieter mit dem Wechsel – er koordiniert Kündigung und Umschalttermin, damit keine längere Versorgungslücke entsteht. Kündige nicht zusätzlich selbst: Das kann zu Terminproblemen oder überlappenden Verträgen führen.",
+      },
+      {
+        question: "Was passiert nach Ablauf der Mindestvertragslaufzeit?",
+        answer:
+          "Der Vertrag läuft automatisch weiter, ist dann aber mit einer Frist von einem Monat kündbar. Da der Preis nach der Aktionsphase oft höher liegt, lohnt sich zum Laufzeitende ein neuer Vergleich – oder ein Gespräch mit dem bisherigen Anbieter über die aktuellen Konditionen.",
+      },
+      {
+        question: "Warum ist die Verfügbarkeitsprüfung so wichtig?",
+        answer:
+          "Weil Internettarife adressgebunden sind: Welche Anschlussart und welche Geschwindigkeit bei dir möglich ist, entscheidet die Infrastruktur an deiner Adresse. Vergleichsergebnisse ohne geprüfte Adresse sind unverbindlich – verbindlich ist erst die Prüfung beim Anbieter selbst.",
+      },
+    ],
+    relatedPartnerIds: [],
+    sensitive: false,
+  },
+  {
     slug: "strom-gas-wechseln",
     title: "Strom- und Gasanbieter wechseln: so gehst du sachlich vor",
     metaTitle: "Strom & Gas wechseln: Ablauf, Fristen, Kostenfallen",
