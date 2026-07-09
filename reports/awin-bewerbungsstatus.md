@@ -8,7 +8,7 @@
 
 ## 1. Bereits aktiv eingebaut (nicht erneut bewerben)
 
-Alle sieben Programme laufen über Awin und sind eingebaut. Die ersten fünf sind **live auf tarvyo24.de** (Deploy erfolgt); congstar und NetCologne sind committet und gehen mit dem nächsten manuellen Deploy live. Datenschutzerklärung dabei unverändert geblieben — weiterhin ausschließlich Awin, keine neuen Netzwerke/Scripts/Cookies.
+Alle acht Programme laufen über Awin und sind eingebaut. Seit Deploy #64 sind alle **live auf tarvyo24.de** (inkl. congstar, NetCologne und fraenk). Datenschutzerklärung dabei unverändert geblieben — weiterhin ausschließlich Awin, keine neuen Netzwerke/Scripts/Cookies.
 
 | Programm | Awin-ID | Tarvyo24-Einbindung | Aktiviert |
 |---|---|---|---|
@@ -19,10 +19,19 @@ Alle sieben Programme laufen über Awin und sind eingebaut. Die ersten fünf sin
 | CHECK24 Partnerprogramm | 9364 | NUR kategorien/strom-gas + internet-dsl (zwei Einträge mit kategoriespezifischen Deeplinks; Mobilfunk-, Versicherungs-, Kredit-, Konto-, Reise- und Mietwagen-Sparten bewusst nicht aktiviert) | 08.07.2026 |
 | congstar DE | 11938 | NUR kategorien/handyvertrag (DSL-/Zuhause-Angebote nicht aktiviert; Auflagen: kein Brand-Bidding/SEM, keine Gutschein-/Cashback-Versprechen, keine E-Mail-Werbung, kein eBay-Vertrieb) | 09.07.2026 |
 | NetCologne DE | 13664 | NUR kategorien/internet-dsl (regionaler Anbieter Köln/Bonn/Aachen und Umgebung — nie als bundesweit darstellen; Auflagen: kein Paid Search/Social Advertising ohne Freigabe, „NetCologne"/„NetAachen" bei Paid Ads ausschließen, keine Bonus-/Klickzwang-Modelle, keine Garantieaussagen) | 09.07.2026 |
+| fraenk DE | 20041 | NUR kategorien/handyvertrag (App-basierter SIM-only-/eSIM-Mobilfunktarif; Einbau-Commit 7b05ee9, live nach Deploy #64 — Besonderheiten siehe Hinweisblock unter dieser Tabelle) | 09.07.2026 |
+
+**Hinweise zur fraenk-Einbindung (Programm 20041):**
+
+- fraenk ist ein **App-basierter SIM-only-/eSIM-Mobilfunktarif** — Abschluss und Aktivierung erfolgen ausschließlich über die fraenk App; entsprechend sachlich als App-Tarif einordnen, nicht als klassischen Desktop-Handyvergleich darstellen.
+- Die Einbindung erfolgte **NICHT über den Awin Link Builder**, sondern über den offiziellen Awin-Werbemittel-Textlink **„FRAENK App eSim"**:
+  `https://www.awin1.com/awclick.php?gid=391743&mid=20041&awinaffid=2974305&linkid=2879940&clickref=tarvyo24_handyvertrag_fraenk_app_partnercard`
+- **Tracking-Einschränkung laut Awin:** Aktuell kann ausschließlich **mobiler Traffic mit direktem Einstieg in Play Store/App Store** getrackt werden — Desktop-Klicks werden möglicherweise nicht vergütet.
+- **Live-Test:** Klick führte zur Weiterleitung auf `fraenk.de/esim` mit Awin-Trackingparametern (u. a. `PublisherID=2974305`, `awc=20041_…`) — Tracking-Kette funktioniert.
 
 ## 2. + 3. Beworben / offen / ausstehend — Arbeitsliste je Programm
 
-27 Programme beworben, Zulassung ausstehend (ursprünglich 31; Tarifcheck.de, CHECK24, congstar und NetCologne sind inzwischen zugelassen und eingebaut → Abschnitt 1). Prioritäten aus der Priorisierungsanalyse; zwei der drei manuellen Korrekturen der Skript-Einstufung sind noch gelistet (*).
+26 Programme beworben, Zulassung ausstehend (ursprünglich 31; Tarifcheck.de, CHECK24, congstar, NetCologne und fraenk sind inzwischen zugelassen und eingebaut → Abschnitt 1). Prioritäten aus der Priorisierungsanalyse; zwei der drei manuellen Korrekturen der Skript-Einstufung sind noch gelistet (*).
 
 ### Vergleichsportale (kategorienübergreifend — nur unkritische Bereiche bewerben)
 
@@ -51,7 +60,6 @@ Alle sieben Programme laufen über Awin und sind eingebaut. Die ersten fünf sin
 
 | Programm (ID) | Prio | Warum interessant | Bei Zulassung beachten | Tarvyo24-Seite | DS |
 |---|---|---|---|---|---|
-| fraenk DE (20041) | A | 91 % Bestätigung, „green", App-Tarif im Telekom-Netz | Provision pro Abschluss prüfen (App-only-Modell im Text korrekt beschreiben) | kategorien/handyvertrag | ✅ unverändert |
 | WEtell DE (44455) | A | Nachhaltiger Mobilfunk, 62 % Bestätigung, passt zur sachlichen Redaktionslinie | Nachhaltigkeitsaussagen nur so weit übernehmen, wie belegt | kategorien/handyvertrag | ✅ unverändert |
 | PremiumSIM DE (15013) | B | EPC 1,90, bis 30 €/Lead, „green" | auffällig niedrige Bestätigungsquote (3 %) — Konditionen bei Zulassung genau prüfen | kategorien/handyvertrag | ✅ unverändert |
 | winSIM DE (15070) | B | Drillisch-Marke, bis 30 €/Lead, „green" | Konditionsgruppen je Tarif prüfen | kategorien/handyvertrag | ✅ unverändert |
